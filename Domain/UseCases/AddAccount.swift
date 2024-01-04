@@ -1,0 +1,23 @@
+import Foundation
+
+// This will be my first use case
+public protocol AddAccount {
+    func add(
+        addAccountModel: AddAccountModel,
+        completion: @escaping (Result<AccountModel, Error>) -> Error
+    )
+}
+
+public struct AddAccountModel: Model {
+    var name: String
+    var email: String
+    var password: String
+    var passwordConfirmation: String
+
+    public init(name: String, email: String, password: String, passwordConfirmation: String) {
+        self.name = name
+        self.email = email
+        self.password = password
+        self.passwordConfirmation = passwordConfirmation
+    }
+}
