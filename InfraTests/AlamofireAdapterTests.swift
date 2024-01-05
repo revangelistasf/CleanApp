@@ -8,23 +8,48 @@ class AlamofireAdapter {
         self.session = session
     }
 
-    func post(to url: URL) {
-        session.request(url, method: .post).resume()
+    func post(to url: URL, with data: Data?) {
+        let json = data == nil ? nil : try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any]
+        session.request(url, method: .post, parameters: json, encoding: JSONEncoding.default).resume()
     }
 }
 
 class AlamofireAdapterTests: XCTestCase {
-    func test_() {
+    func test_post_validUrlAndMethod() {
         let url = makeUrl()
+        testRequestFor(url: url, data: makeValidData()) { request in
+            XCTAssertEqual(url, request.url)
+            XCTAssertEqual("POST", request.httpMethod)
+            XCTAssertNotNil(request.httpBodyStream)
+        }
+    }
+
+    func test_post_makePostWithoutData_requestWithoutData() {
+        testRequestFor(data: nil) { request in
+            XCTAssertNil(request.httpBodyStream)
+        }
+    }
+}
+
+extension AlamofireAdapterTests {
+    func makeSut(
+        file: StaticString = #filePath,
+        line: UInt = #line
+    ) -> AlamofireAdapter {
         let configuration = URLSessionConfiguration.default
         configuration.protocolClasses = [UrlProtocolStub.self]
         let session = Session(configuration: configuration)
         let sut = AlamofireAdapter(session: session)
-        sut.post(to: url)
+        checkMemoryLeak(for: sut, file: file, line: line)
+        return sut
+    }
+
+    func testRequestFor(url: URL = makeUrl(), data: Data?, action: @escaping (URLRequest) -> Void) {
+        let sut = makeSut()
+        sut.post(to: url, with: data)
         let exp = expectation(description: "waiting")
         UrlProtocolStub.observerRequest { request in
-            XCTAssertEqual(url, request.url)
-            XCTAssertEqual("POST", request.httpMethod)
+            action(request)
             exp.fulfill()
         }
 
