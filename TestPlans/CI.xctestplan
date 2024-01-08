@@ -1,0 +1,35 @@
+{
+  "configurations" : [
+    {
+      "id" : "3D153DCB-A925-4900-9958-9BDC268B1004",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random",
+    "testTimeoutsEnabled" : true,
+    "threadSanitizerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CleanApp.xcodeproj",
+        "identifier" : "DAA603692B45C55F0096646F",
+        "name" : "DataTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CleanApp.xcodeproj",
+        "identifier" : "DA9B0AEB2B4800E4009AD05D",
+        "name" : "InfraTests"
+      }
+    }
+  ],
+  "version" : 1
+}

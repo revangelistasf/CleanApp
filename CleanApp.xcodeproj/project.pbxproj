@@ -88,6 +88,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DA13FE432B4C0E3F002AE9BA /* CI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI.xctestplan; sourceTree = "<group>"; };
 		DA9B0A522B46FCD1009AD05D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DA9B0A542B470A15009AD05D /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
 		DA9B0A562B470A58009AD05D /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
@@ -106,6 +107,8 @@
 		DAA6036F2B45C55F0096646F /* RemoteAddAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountTests.swift; sourceTree = "<group>"; };
 		DAA6037E2B45C59F0096646F /* AddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
 		DAA603802B46BF470096646F /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		DAF17E592B4C0C85000016F6 /* DataTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = DataTestPlan.xctestplan; sourceTree = "<group>"; };
+		DAF17E5A2B4C0D1A000016F6 /* InfraTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = InfraTestPlan.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +241,7 @@
 		DAA6033E2B45C4B60096646F = {
 			isa = PBXGroup;
 			children = (
+				DAF17E582B4C0C51000016F6 /* TestPlans */,
 				DAA603582B45C54B0096646F /* Domain */,
 				DAA603642B45C55F0096646F /* Data */,
 				DAA6036E2B45C55F0096646F /* DataTests */,
@@ -294,6 +298,16 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAF17E582B4C0C51000016F6 /* TestPlans */ = {
+			isa = PBXGroup;
+			children = (
+				DAF17E592B4C0C85000016F6 /* DataTestPlan.xctestplan */,
+				DAF17E5A2B4C0D1A000016F6 /* InfraTestPlan.xctestplan */,
+				DA13FE432B4C0E3F002AE9BA /* CI.xctestplan */,
+			);
+			path = TestPlans;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

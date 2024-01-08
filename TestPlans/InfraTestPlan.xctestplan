@@ -1,0 +1,27 @@
+{
+  "configurations" : [
+    {
+      "id" : "A64C37AC-8669-4A43-8B3C-5C4F2B751DA0",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random",
+    "testTimeoutsEnabled" : true,
+    "threadSanitizerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CleanApp.xcodeproj",
+        "identifier" : "DA9B0AEB2B4800E4009AD05D",
+        "name" : "InfraTests"
+      }
+    }
+  ],
+  "version" : 1
+}

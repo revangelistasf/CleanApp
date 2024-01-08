@@ -1,0 +1,26 @@
+{
+  "configurations" : [
+    {
+      "id" : "C44C25A6-1D5D-41DE-9FB6-0DCAA3611484",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random",
+    "testTimeoutsEnabled" : true,
+    "threadSanitizerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:CleanApp.xcodeproj",
+        "identifier" : "DAA603692B45C55F0096646F",
+        "name" : "DataTests"
+      }
+    }
+  ],
+  "version" : 1
+}
