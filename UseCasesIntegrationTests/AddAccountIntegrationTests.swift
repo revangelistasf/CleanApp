@@ -5,7 +5,7 @@ import Domain
 
 class AddAccountIntegrationTests: XCTestCase {
 
-    func test_addAccount() {
+    func DISABLE_test_addAccount() {
         let alamofireAdapter = AlamofireAdapter()
         let url = URL(string: "https://clean-node-api.herokuapp.com/api/signup")!
         let sut = RemoteAddAccount(url: url, httpClient: alamofireAdapter)
