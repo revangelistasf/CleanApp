@@ -18,6 +18,10 @@
 		DA9987082B4C4D8A00623B05 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DAA603572B45C54B0096646F /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA99870E2B4C4DD900623B05 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA99870D2B4C4DD900623B05 /* AlertView.swift */; };
 		DA9987132B4C526700623B05 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9987122B4C526700623B05 /* EmailValidator.swift */; };
+		DA9987152B4D71A300623B05 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9987142B4D71A300623B05 /* AccountModelFactory.swift */; };
+		DA9987162B4D726F00623B05 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9987142B4D71A300623B05 /* AccountModelFactory.swift */; };
+		DA9987172B4D9EB700623B05 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9B0ADA2B473AFD009AD05D /* XCTestCase+Extensions.swift */; };
+		DA9987192B4DA35800623B05 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9987182B4DA35700623B05 /* LoadingView.swift */; };
 		DA9B0A532B46FCD1009AD05D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9B0A522B46FCD1009AD05D /* Model.swift */; };
 		DA9B0A552B470A15009AD05D /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9B0A542B470A15009AD05D /* RemoteAddAccount.swift */; };
 		DA9B0A572B470A58009AD05D /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9B0A562B470A58009AD05D /* HttpPostClient.swift */; };
@@ -165,6 +169,8 @@
 		DA9987052B4C4D0C00623B05 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		DA99870D2B4C4DD900623B05 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		DA9987122B4C526700623B05 /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		DA9987142B4D71A300623B05 /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
+		DA9987182B4DA35700623B05 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		DA9B0A522B46FCD1009AD05D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DA9B0A542B470A15009AD05D /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
 		DA9B0A562B470A58009AD05D /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
@@ -284,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				DA99870D2B4C4DD900623B05 /* AlertView.swift */,
+				DA9987182B4DA35700623B05 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -375,6 +382,7 @@
 			children = (
 				DA9B0ADA2B473AFD009AD05D /* XCTestCase+Extensions.swift */,
 				DA9B0ADE2B473BE9009AD05D /* TestFactories.swift */,
+				DA9987142B4D71A300623B05 /* AccountModelFactory.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -804,6 +812,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA9987062B4C4D0C00623B05 /* SignUpPresenter.swift in Sources */,
+				DA9987192B4DA35800623B05 /* LoadingView.swift in Sources */,
 				DA99870E2B4C4DD900623B05 /* AlertView.swift in Sources */,
 				DA9987132B4C526700623B05 /* EmailValidator.swift in Sources */,
 			);
@@ -813,6 +822,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA9987162B4D726F00623B05 /* AccountModelFactory.swift in Sources */,
+				DA9987172B4D9EB700623B05 /* XCTestCase+Extensions.swift in Sources */,
 				DA9986FD2B4C39CA00623B05 /* SignUpPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -863,6 +874,7 @@
 			files = (
 				DA9B0ADF2B473BE9009AD05D /* TestFactories.swift in Sources */,
 				DA9B0ADD2B473B73009AD05D /* XCTestCase+Extensions.swift in Sources */,
+				DA9987152B4D71A300623B05 /* AccountModelFactory.swift in Sources */,
 				DAA603702B45C55F0096646F /* RemoteAddAccountTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -87,24 +87,6 @@ extension RemoteAddAccountTests {
         wait(for: [exp], timeout: 1)
     }
 
-    func makeAddAccountModel() -> AddAccountModel {
-        AddAccountModel(
-            name: "any_name",
-            email: "any_email@mail.com",
-            password: "any_password",
-            passwordConfirmation: "any_password"
-        )
-    }
-
-    func makeAccountModel() -> AccountModel {
-        AccountModel(
-            id: "any_id",
-            name: "any_name",
-            email: "any_email@mail.com",
-            password: "any_password"
-        )
-    }
-
     class HttpClientSpy: HttpPostClient {
         var urls = [URL]()
         var data: Data?
