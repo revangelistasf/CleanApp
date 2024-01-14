@@ -25,23 +25,21 @@ public final class SignUpPresenter {
                 viewModel: AlertViewModel(title: "Validation Failed", message: message)
             )
         } else {
-            let addAccountModel = AddAccountModel(
-                name: viewModel.name ?? "",
-                email: viewModel.email ?? "",
-                password: viewModel.password ?? "",
-                passwordConfirmation: viewModel.passwordConfirmation ?? ""
-            )
+            let addAccountModel = SignUpMapper.toAddAccountModel(viewModel: viewModel)
             loadingView.display(viewModel: LoadingViewModel(isLoading: true))
             addAccount.add(addAccountModel: addAccountModel) { [weak self] result in
                 guard let self else { return }
                 switch result {
-                case .success(let success):
-                    break
+                case .success:
+                    self.alertView.showMessage(
+                        viewModel: AlertViewModel(title: "Success", message: "Account created successfully.")
+                    )
                 case .failure:
                     self.alertView.showMessage(
                         viewModel: AlertViewModel(title: "Error", message: "Something went wrong, try again later.")
                     )
                 }
+                self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
             }
         }
     }
@@ -61,24 +59,5 @@ public final class SignUpPresenter {
             return "Please enter a valid email field"
         }
         return nil
-    }
-}
-
-public struct SignUpViewModel {
-    public var name: String?
-    public var email: String?
-    public var password: String?
-    public var passwordConfirmation: String?
-
-    public init(
-        name: String? = nil,
-        email: String? = nil,
-        password: String? = nil,
-        passwordConfirmation: String? = nil
-    ) {
-        self.name = name
-        self.email = email
-        self.password = password
-        self.passwordConfirmation = passwordConfirmation
     }
 }
