@@ -20,6 +20,9 @@
 		4647C5ED2B536EC500830110 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5E72B536EC500830110 /* LoadingView.swift */; };
 		468379D52B72656A003D2596 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9986F02B4C39CA00623B05 /* Presentation.framework */; };
 		468379D62B72656A003D2596 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA9986F02B4C39CA00623B05 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		468379E02B73CD08003D2596 /* UIControl+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468379DF2B73CD08003D2596 /* UIControl+Ext.swift */; };
+		468379E32B73FCB1003D2596 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468379E22B73FCB1003D2596 /* UIViewController+Ext.swift */; };
+		468379E52B73FDCD003D2596 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468379E42B73FDCD003D2596 /* Storyboarded.swift */; };
 		46F7169D2B7240F400EF701A /* UIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F716932B7240F400EF701A /* UIMobile.framework */; };
 		46F716A22B7240F400EF701A /* SignUpViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F716A12B7240F400EF701A /* SignUpViewControllerTests.swift */; };
 		46F716AD2B72634200EF701A /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46F716AC2B72634200EF701A /* SignUp.storyboard */; };
@@ -208,6 +211,9 @@
 		4647C5E42B536EC500830110 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		4647C5E62B536EC500830110 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		4647C5E72B536EC500830110 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		468379DF2B73CD08003D2596 /* UIControl+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Ext.swift"; sourceTree = "<group>"; };
+		468379E22B73FCB1003D2596 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		468379E42B73FDCD003D2596 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		46F716932B7240F400EF701A /* UIMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F7169C2B7240F400EF701A /* UIMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F716A12B7240F400EF701A /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTests.swift; sourceTree = "<group>"; };
@@ -394,11 +400,61 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		46F716942B7240F400EF701A /* UIMobile */ = {
+		468379DA2B73CC91003D2596 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
 				46F716AA2B72631800EF701A /* SignUpViewController.swift */,
 				46F716AC2B72634200EF701A /* SignUp.storyboard */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		468379DB2B73CCA4003D2596 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				46F716A12B7240F400EF701A /* SignUpViewControllerTests.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		468379DC2B73CCE5003D2596 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				468379DA2B73CC91003D2596 /* SignUp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		468379DD2B73CCEA003D2596 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				468379DB2B73CCA4003D2596 /* SignUp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		468379DE2B73CCF5003D2596 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				468379DF2B73CD08003D2596 /* UIControl+Ext.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		468379E12B73FC9C003D2596 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				468379E22B73FCB1003D2596 /* UIViewController+Ext.swift */,
+				468379E42B73FDCD003D2596 /* Storyboarded.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		46F716942B7240F400EF701A /* UIMobile */ = {
+			isa = PBXGroup;
+			children = (
+				468379E12B73FC9C003D2596 /* Helpers */,
+				468379DC2B73CCE5003D2596 /* Scenes */,
 			);
 			path = UIMobile;
 			sourceTree = "<group>";
@@ -406,7 +462,8 @@
 		46F716A02B7240F400EF701A /* UIMobileTests */ = {
 			isa = PBXGroup;
 			children = (
-				46F716A12B7240F400EF701A /* SignUpViewControllerTests.swift */,
+				468379DE2B73CCF5003D2596 /* Helpers */,
+				468379DD2B73CCEA003D2596 /* Scenes */,
 			);
 			path = UIMobileTests;
 			sourceTree = "<group>";
@@ -1006,7 +1063,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				468379E32B73FCB1003D2596 /* UIViewController+Ext.swift in Sources */,
 				46F716AE2B72644300EF701A /* SignUpViewController.swift in Sources */,
+				468379E52B73FDCD003D2596 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1015,6 +1074,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F716A22B7240F400EF701A /* SignUpViewControllerTests.swift in Sources */,
+				468379E02B73CD08003D2596 /* UIControl+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
