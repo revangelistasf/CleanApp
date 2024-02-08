@@ -1,7 +1,7 @@
 import UIKit
 import Presentation
 
-final class SignUpViewController: UIViewController, Storyboarded {
+public final class SignUpViewController: UIViewController, Storyboarded {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
@@ -9,15 +9,17 @@ final class SignUpViewController: UIViewController, Storyboarded {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
     
-    var signUp: ((SignUpViewModel) -> Void)?
+    public var signUp: ((SignUpViewModel) -> Void)?
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         configure()
     }
     
     private func configure() {
+        saveButton.layer.cornerRadius = 5
         saveButton.addTarget(self, action: #selector(didTapSaveButton), for: .touchUpInside)
+        loadingIndicator.hidesWhenStopped = true
         hideKeyboardOnTap()
     }
 
@@ -34,14 +36,14 @@ final class SignUpViewController: UIViewController, Storyboarded {
 }
 
 extension SignUpViewController: LoadingView {
-    func display(viewModel: Presentation.LoadingViewModel) {
+    public func display(viewModel: Presentation.LoadingViewModel) {
         viewModel.isLoading ? loadingIndicator.startAnimating() : loadingIndicator.stopAnimating()
     }
 }
 
 
 extension SignUpViewController: AlertView {
-    func showMessage(viewModel: Presentation.AlertViewModel) {
+    public func showMessage(viewModel: Presentation.AlertViewModel) {
         let alert = UIAlertController(
             title: viewModel.title,
             message: viewModel.message,
