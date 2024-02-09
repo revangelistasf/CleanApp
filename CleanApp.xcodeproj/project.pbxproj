@@ -45,7 +45,6 @@
 		46837A4C2B74FF9E003D2596 /* UIMobile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 46F716932B7240F400EF701A /* UIMobile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		46837A4F2B74FF9E003D2596 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 468379EB2B74CF66003D2596 /* Validation.framework */; };
 		46837A502B74FF9E003D2596 /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 468379EB2B74CF66003D2596 /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		46837A562B74FFFB003D2596 /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46837A552B74FFFB003D2596 /* ControllerFactory.swift */; };
 		46837A582B762F60003D2596 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46837A572B762F60003D2596 /* UseCaseFactory.swift */; };
 		46837A5B2B763009003D2596 /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46837A5A2B763009003D2596 /* SignUpComposer.swift */; };
 		46837A5C2B76318C003D2596 /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D82B536E8600830110 /* AddAccountSpy.swift */; };
@@ -344,7 +343,6 @@
 		46837A1B2B74DBBB003D2596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46837A202B74DBBB003D2596 /* MainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46837A242B74DBBB003D2596 /* SignUpIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTests.swift; sourceTree = "<group>"; };
-		46837A552B74FFFB003D2596 /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		46837A572B762F60003D2596 /* UseCaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		46837A5A2B763009003D2596 /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
 		469F5E3F2B76355700439C4E /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
@@ -662,7 +660,6 @@
 		46837A542B74FFF2003D2596 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				46837A552B74FFFB003D2596 /* ControllerFactory.swift */,
 				46837A572B762F60003D2596 /* UseCaseFactory.swift */,
 			);
 			path = Factories;
@@ -1458,7 +1455,6 @@
 			files = (
 				46837A582B762F60003D2596 /* UseCaseFactory.swift in Sources */,
 				46837A0E2B74DBBA003D2596 /* AppDelegate.swift in Sources */,
-				46837A562B74FFFB003D2596 /* ControllerFactory.swift in Sources */,
 				46837A102B74DBBA003D2596 /* SceneDelegate.swift in Sources */,
 				469F5E402B76355700439C4E /* WeakVarProxy.swift in Sources */,
 				46837A5B2B763009003D2596 /* SignUpComposer.swift in Sources */,
