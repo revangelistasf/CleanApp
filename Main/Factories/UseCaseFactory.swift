@@ -5,10 +5,10 @@ import Domain
 
 final class UseCaseFactory {
     private static let httpClient: HttpPostClient = AlamofireAdapter()
-    private static let baseUrl = "https://clean-note-api.herokuapp.com/api"
+    private static let apiBaseUrl = Environment.variable(.apiBaseUrl)
     
     private static func makeUrl(path: String) -> URL {
-        return URL(string: "\(baseUrl)/\(path)")!
+        return URL(string: "\(apiBaseUrl)/\(path)")!
     }
     
     static func makeRemoteAddAccount() -> AddAccount {

@@ -50,6 +50,8 @@
 		46837A5C2B76318C003D2596 /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D82B536E8600830110 /* AddAccountSpy.swift */; };
 		46837A5D2B7631D5003D2596 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9B0ADA2B473AFD009AD05D /* XCTestCase+Extensions.swift */; };
 		469F5E402B76355700439C4E /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469F5E3F2B76355700439C4E /* WeakVarProxy.swift */; };
+		469F5E442B76767B00439C4E /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 469F5E432B76767B00439C4E /* Release.xcconfig */; };
+		469F5E462B76770A00439C4E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469F5E452B76770A00439C4E /* Environment.swift */; };
 		46F7169D2B7240F400EF701A /* UIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F716932B7240F400EF701A /* UIMobile.framework */; };
 		46F716A22B7240F400EF701A /* SignUpViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F716A12B7240F400EF701A /* SignUpViewControllerTests.swift */; };
 		46F716AD2B72634200EF701A /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46F716AC2B72634200EF701A /* SignUp.storyboard */; };
@@ -346,6 +348,9 @@
 		46837A572B762F60003D2596 /* UseCaseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		46837A5A2B763009003D2596 /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
 		469F5E3F2B76355700439C4E /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
+		469F5E422B76762600439C4E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		469F5E432B76767B00439C4E /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		469F5E452B76770A00439C4E /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		46F716932B7240F400EF701A /* UIMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F7169C2B7240F400EF701A /* UIMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F716A12B7240F400EF701A /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTests.swift; sourceTree = "<group>"; };
@@ -637,14 +642,15 @@
 		46837A0C2B74DBBA003D2596 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				469F5E3E2B76354D00439C4E /* Proxies */,
 				46837A592B762FF9003D2596 /* Composers */,
+				469F5E412B76760600439C4E /* Env */,
 				46837A542B74FFF2003D2596 /* Factories */,
+				469F5E3E2B76354D00439C4E /* Proxies */,
+				46837A1B2B74DBBB003D2596 /* Info.plist */,
 				46837A0D2B74DBBA003D2596 /* AppDelegate.swift */,
 				46837A0F2B74DBBA003D2596 /* SceneDelegate.swift */,
 				46837A162B74DBBB003D2596 /* Assets.xcassets */,
 				46837A182B74DBBB003D2596 /* LaunchScreen.storyboard */,
-				46837A1B2B74DBBB003D2596 /* Info.plist */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -679,6 +685,16 @@
 				469F5E3F2B76355700439C4E /* WeakVarProxy.swift */,
 			);
 			path = Proxies;
+			sourceTree = "<group>";
+		};
+		469F5E412B76760600439C4E /* Env */ = {
+			isa = PBXGroup;
+			children = (
+				469F5E422B76762600439C4E /* Debug.xcconfig */,
+				469F5E432B76767B00439C4E /* Release.xcconfig */,
+				469F5E452B76770A00439C4E /* Environment.swift */,
+			);
+			path = Env;
 			sourceTree = "<group>";
 		};
 		46F716942B7240F400EF701A /* UIMobile */ = {
@@ -1349,6 +1365,7 @@
 			files = (
 				46837A1A2B74DBBB003D2596 /* LaunchScreen.storyboard in Resources */,
 				46837A172B74DBBB003D2596 /* Assets.xcassets in Resources */,
+				469F5E442B76767B00439C4E /* Release.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1454,6 +1471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46837A582B762F60003D2596 /* UseCaseFactory.swift in Sources */,
+				469F5E462B76770A00439C4E /* Environment.swift in Sources */,
 				46837A0E2B74DBBA003D2596 /* AppDelegate.swift in Sources */,
 				46837A102B74DBBA003D2596 /* SceneDelegate.swift in Sources */,
 				469F5E402B76355700439C4E /* WeakVarProxy.swift in Sources */,
@@ -1805,6 +1823,7 @@
 		};
 		46837A332B74DBBC003D2596 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 469F5E422B76762600439C4E /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1812,6 +1831,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Main/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -1833,6 +1853,7 @@
 		};
 		46837A342B74DBBC003D2596 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 469F5E432B76767B00439C4E /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1840,6 +1861,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Main/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
