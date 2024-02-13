@@ -36,7 +36,7 @@ public final class SignUpViewController: UIViewController, Storyboarded {
 }
 
 extension SignUpViewController: LoadingView {
-    public func display(viewModel: Presentation.LoadingViewModel) {
+    public func display(viewModel:  LoadingViewModel) {
         viewModel.isLoading ? loadingIndicator.startAnimating() : loadingIndicator.stopAnimating()
     }
 }

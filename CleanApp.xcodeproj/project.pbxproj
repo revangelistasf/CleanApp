@@ -18,6 +18,7 @@
 		4647C5EB2B536EC500830110 /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5E42B536EC500830110 /* EmailValidator.swift */; };
 		4647C5EC2B536EC500830110 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5E62B536EC500830110 /* AlertView.swift */; };
 		4647C5ED2B536EC500830110 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5E72B536EC500830110 /* LoadingView.swift */; };
+		46713FB32B7BB37600993F7F /* TestsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D12B536E8600830110 /* TestsFactory.swift */; };
 		468379D52B72656A003D2596 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9986F02B4C39CA00623B05 /* Presentation.framework */; };
 		468379D62B72656A003D2596 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA9986F02B4C39CA00623B05 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		468379E02B73CD08003D2596 /* UIControl+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 468379DF2B73CD08003D2596 /* UIControl+Ext.swift */; };
@@ -52,6 +53,7 @@
 		469F5E402B76355700439C4E /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469F5E3F2B76355700439C4E /* WeakVarProxy.swift */; };
 		469F5E442B76767B00439C4E /* Release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 469F5E432B76767B00439C4E /* Release.xcconfig */; };
 		469F5E462B76770A00439C4E /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469F5E452B76770A00439C4E /* Environment.swift */; };
+		46D43B752B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D43B742B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift */; };
 		46F7169D2B7240F400EF701A /* UIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F716932B7240F400EF701A /* UIMobile.framework */; };
 		46F716A22B7240F400EF701A /* SignUpViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F716A12B7240F400EF701A /* SignUpViewControllerTests.swift */; };
 		46F716AD2B72634200EF701A /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46F716AC2B72634200EF701A /* SignUp.storyboard */; };
@@ -351,6 +353,7 @@
 		469F5E422B76762600439C4E /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		469F5E432B76767B00439C4E /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		469F5E452B76770A00439C4E /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		46D43B742B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDispatchQueueDecorator.swift; sourceTree = "<group>"; };
 		46F716932B7240F400EF701A /* UIMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F7169C2B7240F400EF701A /* UIMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F716A12B7240F400EF701A /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTests.swift; sourceTree = "<group>"; };
@@ -643,6 +646,7 @@
 			isa = PBXGroup;
 			children = (
 				46837A592B762FF9003D2596 /* Composers */,
+				46D43B732B7BCAA100E72BC7 /* Decorators */,
 				469F5E412B76760600439C4E /* Env */,
 				46837A542B74FFF2003D2596 /* Factories */,
 				469F5E3E2B76354D00439C4E /* Proxies */,
@@ -695,6 +699,14 @@
 				469F5E452B76770A00439C4E /* Environment.swift */,
 			);
 			path = Env;
+			sourceTree = "<group>";
+		};
+		46D43B732B7BCAA100E72BC7 /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				46D43B742B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift */,
+			);
+			path = Decorators;
 			sourceTree = "<group>";
 		};
 		46F716942B7240F400EF701A /* UIMobile */ = {
@@ -1475,6 +1487,7 @@
 				46837A0E2B74DBBA003D2596 /* AppDelegate.swift in Sources */,
 				46837A102B74DBBA003D2596 /* SceneDelegate.swift in Sources */,
 				469F5E402B76355700439C4E /* WeakVarProxy.swift in Sources */,
+				46D43B752B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift in Sources */,
 				46837A5B2B763009003D2596 /* SignUpComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1483,6 +1496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46713FB32B7BB37600993F7F /* TestsFactory.swift in Sources */,
 				46837A5C2B76318C003D2596 /* AddAccountSpy.swift in Sources */,
 				46837A5D2B7631D5003D2596 /* XCTestCase+Extensions.swift in Sources */,
 				46837A252B74DBBB003D2596 /* SignUpComposerTests.swift in Sources */,
