@@ -29,6 +29,30 @@
         "identifier" : "DA9B0AEB2B4800E4009AD05D",
         "name" : "InfraTests"
       }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CleanApp.xcodeproj",
+        "identifier" : "DA9986F62B4C39CA00623B05",
+        "name" : "PresentationTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CleanApp.xcodeproj",
+        "identifier" : "DA9986D32B4C176600623B05",
+        "name" : "UseCasesIntegrationTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CleanApp.xcodeproj",
+        "identifier" : "468379F12B74CF66003D2596",
+        "name" : "ValidationTests"
+      }
     }
   ],
   "version" : 1

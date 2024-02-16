@@ -1,0 +1,27 @@
+{
+  "configurations" : [
+    {
+      "id" : "D98B1D1E-2B7C-4E8F-83D0-F2AAF2FF4184",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random",
+    "testTimeoutsEnabled" : true,
+    "threadSanitizerEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CleanApp.xcodeproj",
+        "identifier" : "468379F12B74CF66003D2596",
+        "name" : "ValidationTests"
+      }
+    }
+  ],
+  "version" : 1
+}

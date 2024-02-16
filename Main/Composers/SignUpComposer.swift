@@ -9,9 +9,9 @@ public final class SignUpComposer {
         let controller = SignUpViewController.instantiate()
         let presenter = SignUpPresenter(
             alertView: WeakVarProxy(controller),
-            emailValidator: EmailValidatorAdapter(),
             addAccount: addAccount,
-            loadingView: WeakVarProxy(controller)
+            loadingView: WeakVarProxy(controller),
+            validation: Validation()
         )
         controller.signUp = presenter.signUp
         return controller
