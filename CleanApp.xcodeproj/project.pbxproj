@@ -66,6 +66,7 @@
 		46C2603F2B82507A002D7777 /* ValidationCompositeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C2603E2B82507A002D7777 /* ValidationCompositeTests.swift */; };
 		46C260412B8257F9002D7777 /* ValidationComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C260402B8257F9002D7777 /* ValidationComposite.swift */; };
 		46C260442B82585E002D7777 /* ValidationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C260432B82585E002D7777 /* ValidationSpy.swift */; };
+		46C260472B829982002D7777 /* EmailValidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D62B536E8600830110 /* EmailValidatorSpy.swift */; };
 		46D43B752B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D43B742B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift */; };
 		46F3CB6A2B7FB415007F5F8D /* RequiredFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3CB692B7FB415007F5F8D /* RequiredFieldValidation.swift */; };
 		46F7169D2B7240F400EF701A /* UIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F716932B7240F400EF701A /* UIMobile.framework */; };
@@ -1629,6 +1630,7 @@
 			files = (
 				46713FB32B7BB37600993F7F /* TestsFactory.swift in Sources */,
 				46837A5C2B76318C003D2596 /* AddAccountSpy.swift in Sources */,
+				46C260472B829982002D7777 /* EmailValidatorSpy.swift in Sources */,
 				46837A5D2B7631D5003D2596 /* XCTestCase+Extensions.swift in Sources */,
 				46837A252B74DBBB003D2596 /* SignUpComposerTests.swift in Sources */,
 			);

@@ -1,6 +1,7 @@
 import XCTest
 import Main
 import UIMobile
+import Validation
 
 final class SignUpComposerTests: XCTestCase {
     func test_backgroundRequest_shouldCompleteOnMainThread() {
@@ -13,6 +14,45 @@ final class SignUpComposerTests: XCTestCase {
             exp.fulfill()
         }
         wait(for: [exp], timeout: 1)
+    }
+    
+    func test_doInjectCorrectValidations() {
+        let validations = SignUpComposer.makeValidations()
+        XCTAssertEqual(
+            validations[0] as! RequiredFieldValidation,
+            RequiredFieldValidation(fieldName: "name", fieldLabel: "Name")
+        ) 
+        XCTAssertEqual(
+            validations[1] as! RequiredFieldValidation,
+            RequiredFieldValidation(fieldName: "email", fieldLabel: "Email")
+        )
+        XCTAssertEqual(
+            validations[2] as! EmailValidation,
+            EmailValidation(
+                fieldName: "email",
+                fieldLabel: "Email",
+                emailValidator: EmailValidatorSpy()
+            )
+        )
+        XCTAssertEqual(
+            validations[3] as! RequiredFieldValidation,
+            RequiredFieldValidation(fieldName: "password", fieldLabel: "Password")
+        )
+        XCTAssertEqual(
+            validations[4] as! RequiredFieldValidation,
+            RequiredFieldValidation(
+                fieldName: "passwordConfirmation",
+                fieldLabel: "Password Confirmation"
+            )
+        )
+        XCTAssertEqual(
+            validations[5] as! CompareFieldsValidation,
+            CompareFieldsValidation(
+                fieldName: "password",
+                fieldNameToCompare: "passwordConfirmation",
+                fieldLabel: "Password Confirmation"
+            )
+        )
     }
 }
 
