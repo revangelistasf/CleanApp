@@ -386,6 +386,8 @@
 		46C2603E2B82507A002D7777 /* ValidationCompositeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationCompositeTests.swift; sourceTree = "<group>"; };
 		46C260402B8257F9002D7777 /* ValidationComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationComposite.swift; sourceTree = "<group>"; };
 		46C260432B82585E002D7777 /* ValidationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationSpy.swift; sourceTree = "<group>"; };
+		46C260482B829F82002D7777 /* Core.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Core.xctestplan; path = ../Core.xctestplan; sourceTree = "<group>"; };
+		46C260492B829F88002D7777 /* Core.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Core.xctestplan; sourceTree = "<group>"; };
 		46D43B742B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDispatchQueueDecorator.swift; sourceTree = "<group>"; };
 		46F3CB662B7FB23A007F5F8D /* Validation.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Validation.xctestplan; sourceTree = "<group>"; };
 		46F3CB692B7FB415007F5F8D /* RequiredFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredFieldValidation.swift; sourceTree = "<group>"; };
@@ -971,23 +973,24 @@
 		DAA6033E2B45C4B60096646F = {
 			isa = PBXGroup;
 			children = (
-				DAF17E582B4C0C51000016F6 /* TestPlans */,
-				DAA603582B45C54B0096646F /* Domain */,
+				46C260482B829F82002D7777 /* Core.xctestplan */,
 				DAA603642B45C55F0096646F /* Data */,
 				DAA6036E2B45C55F0096646F /* DataTests */,
+				DAA603582B45C54B0096646F /* Domain */,
+				DAA603782B45C5680096646F /* Frameworks */,
 				DA9B0AE62B4800E4009AD05D /* Infra */,
 				DA9B0AF02B4800E4009AD05D /* InfraTests */,
-				DA9986D52B4C176600623B05 /* UseCasesIntegrationTests */,
-				DA9986F12B4C39CA00623B05 /* Presentation */,
-				DA9986FB2B4C39CA00623B05 /* PresentationTests */,
-				46F716942B7240F400EF701A /* UIMobile */,
-				46F716A02B7240F400EF701A /* UIMobileTests */,
-				468379EC2B74CF66003D2596 /* Validation */,
-				468379F62B74CF66003D2596 /* ValidationTests */,
 				46837A0C2B74DBBA003D2596 /* Main */,
 				46837A232B74DBBB003D2596 /* MainTests */,
+				DA9986F12B4C39CA00623B05 /* Presentation */,
+				DA9986FB2B4C39CA00623B05 /* PresentationTests */,
 				DAA603492B45C4B60096646F /* Products */,
-				DAA603782B45C5680096646F /* Frameworks */,
+				46F716942B7240F400EF701A /* UIMobile */,
+				46F716A02B7240F400EF701A /* UIMobileTests */,
+				DA9986D52B4C176600623B05 /* UseCasesIntegrationTests */,
+				468379EC2B74CF66003D2596 /* Validation */,
+				468379F62B74CF66003D2596 /* ValidationTests */,
+				DAF17E582B4C0C51000016F6 /* TestPlans */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1051,6 +1054,7 @@
 		DAF17E582B4C0C51000016F6 /* TestPlans */ = {
 			isa = PBXGroup;
 			children = (
+				46C260492B829F88002D7777 /* Core.xctestplan */,
 				DAF17E592B4C0C85000016F6 /* DataTestPlan.xctestplan */,
 				DAF17E5A2B4C0D1A000016F6 /* InfraTestPlan.xctestplan */,
 				DA13FE432B4C0E3F002AE9BA /* CI.xctestplan */,
