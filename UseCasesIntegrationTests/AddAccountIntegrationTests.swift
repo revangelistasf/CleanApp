@@ -7,7 +7,7 @@ class AddAccountIntegrationTests: XCTestCase {
 
     func test_addAccount() {
         let alamofireAdapter = AlamofireAdapter()
-        let url = URL(string: "https://fordevs.herokuapp.com/api/signup")!
+        let url = URL(string: "http://localhost:5050/api/signup")!
         let sut = RemoteAddAccount(url: url, httpClient: alamofireAdapter)
         let addAccountModel = AddAccountModel(
             name: "Roberto Evangelista",
