@@ -25,19 +25,24 @@ public final class SignUpPresenter {
                 viewModel: AlertViewModel(title: "Validation Failed", message: message)
             )
         } else {
-            let addAccountModel = SignUpMapper.toAddAccountModel(viewModel: viewModel)
             loadingView.display(viewModel: LoadingViewModel(isLoading: true))
-            addAccount.add(addAccountModel: addAccountModel) { [weak self] result in
+            addAccount.add(addAccountModel: viewModel.toAddAccountModel()) { [weak self] result in
                 guard let self else { return }
                 self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
                 switch result {
                 case .success:
                     self.alertView.showMessage(
-                        viewModel: AlertViewModel(title: "Success", message: "Account created successfully.")
+                        viewModel: AlertViewModel(
+                            title: "Success",
+                            message: "Account created successfully."
+                        )
                     )
                 case .failure:
                     self.alertView.showMessage(
-                        viewModel: AlertViewModel(title: "Error", message: "Something went wrong, try again later.")
+                        viewModel: AlertViewModel(
+                            title: "Error",
+                            message: "Something went wrong, try again later."
+                        )
                     )
                 }
             }

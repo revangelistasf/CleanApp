@@ -9,10 +9,42 @@
     }
   ],
   "defaultOptions" : {
-
+    "testExecutionOrdering" : "random",
+    "threadSanitizerEnabled" : true
   },
   "testTargets" : [
-
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CleanApp.xcodeproj",
+        "identifier" : "DAA603692B45C55F0096646F",
+        "name" : "DataTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CleanApp.xcodeproj",
+        "identifier" : "DA9B0AEB2B4800E4009AD05D",
+        "name" : "InfraTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CleanApp.xcodeproj",
+        "identifier" : "DA9986F62B4C39CA00623B05",
+        "name" : "PresentationTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:CleanApp.xcodeproj",
+        "identifier" : "468379F12B74CF66003D2596",
+        "name" : "ValidationTests"
+      }
+    }
   ],
   "version" : 1
 }
