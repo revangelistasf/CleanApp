@@ -31,21 +31,20 @@ public final class SignUpPresenter {
                 self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
                 switch result {
                 case .success:
-                    self.alertView.showMessage(
-                        viewModel: AlertViewModel(
-                            title: "Success",
-                            message: "Account created successfully."
-                        )
-                    )
-                case .failure:
-                    self.alertView.showMessage(
-                        viewModel: AlertViewModel(
-                            title: "Error",
-                            message: "Something went wrong, try again later."
-                        )
-                    )
+                    showAlert(title: "Success", message: "Account created successfully.")
+                case .failure(let error):
+                    switch error {
+                    case .emailInUse:
+                        self.showAlert(message: "This email is already in use.")
+                    default:
+                        self.showAlert(message: "Something went wrong, try again later.")
+                    }
                 }
             }
         }
+    }
+    
+    func showAlert(title: String = "Error", message: String) {
+        alertView.showMessage(viewModel: AlertViewModel(title: title, message: message))
     }
 }
