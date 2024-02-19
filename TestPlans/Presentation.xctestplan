@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "FF52BFBA-6A28-4287-91C7-1EB91B671D70",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:CleanApp.xcodeproj",
+        "identifier" : "DA9986F62B4C39CA00623B05",
+        "name" : "PresentationTests"
+      }
+    }
+  ],
+  "version" : 1
+}

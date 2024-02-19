@@ -386,11 +386,11 @@
 		46C2603E2B82507A002D7777 /* ValidationCompositeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationCompositeTests.swift; sourceTree = "<group>"; };
 		46C260402B8257F9002D7777 /* ValidationComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationComposite.swift; sourceTree = "<group>"; };
 		46C260432B82585E002D7777 /* ValidationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationSpy.swift; sourceTree = "<group>"; };
-		46C260482B829F82002D7777 /* Core.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = Core.xctestplan; path = ../Core.xctestplan; sourceTree = "<group>"; };
 		46C260492B829F88002D7777 /* Core.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Core.xctestplan; sourceTree = "<group>"; };
 		46D43B742B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDispatchQueueDecorator.swift; sourceTree = "<group>"; };
 		46F3CB662B7FB23A007F5F8D /* Validation.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Validation.xctestplan; sourceTree = "<group>"; };
 		46F3CB692B7FB415007F5F8D /* RequiredFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredFieldValidation.swift; sourceTree = "<group>"; };
+		46F4AFFB2B8363D3004D50D6 /* Presentation.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Presentation.xctestplan; sourceTree = "<group>"; };
 		46F716932B7240F400EF701A /* UIMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F7169C2B7240F400EF701A /* UIMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F716A12B7240F400EF701A /* SignUpViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTests.swift; sourceTree = "<group>"; };
@@ -973,7 +973,6 @@
 		DAA6033E2B45C4B60096646F = {
 			isa = PBXGroup;
 			children = (
-				46C260482B829F82002D7777 /* Core.xctestplan */,
 				DAA603642B45C55F0096646F /* Data */,
 				DAA6036E2B45C55F0096646F /* DataTests */,
 				DAA603582B45C54B0096646F /* Domain */,
@@ -1054,6 +1053,7 @@
 		DAF17E582B4C0C51000016F6 /* TestPlans */ = {
 			isa = PBXGroup;
 			children = (
+				46F4AFFB2B8363D3004D50D6 /* Presentation.xctestplan */,
 				46C260492B829F88002D7777 /* Core.xctestplan */,
 				DAF17E592B4C0C85000016F6 /* DataTestPlan.xctestplan */,
 				DAF17E5A2B4C0D1A000016F6 /* InfraTestPlan.xctestplan */,

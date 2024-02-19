@@ -78,7 +78,7 @@ class SignUpPresenterTests: XCTestCase {
     func test_signUp_validationFails_showErrorMessage() {
         let alertViewSpy = AlertViewSpy()
         let validationSpy = ValidationSpy()
-        let sut = makeSut(alertView: alertViewSpy)
+        let sut = makeSut(alertView: alertViewSpy, validation: validationSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observe { viewModel in
             XCTAssertEqual(
