@@ -17,10 +17,17 @@ class RemoteAddAccountTests: XCTestCase {
         XCTAssertEqual(httpClientSpy.data, addAccountModel.toData())
     }
 
-    func test_add_completeWithError_whenHttpClientFails() {
+    func test_add_httpClientCompleteWithNoConnectivity_completeWithUnexpectedError() {
         let (sut, httpClientSpy) = makeSut()
         expect(sut, completeWith: .failure(.unexpected)) {
             httpClientSpy.completeWith(.noConnectivity)
+        }
+    }
+
+    func test_add_httpClientCompleteWithForbidden_completeWithEmailInUse() {
+        let (sut, httpClientSpy) = makeSut()
+        expect(sut, completeWith: .failure(.emailInUse)) {
+            httpClientSpy.completeWith(.forbidden)
         }
     }
 
