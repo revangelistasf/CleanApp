@@ -13,10 +13,16 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        configure()
+        setup()
     }
     
-    private func configure() {
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    private func setup() {
+        title = "4Dev"
         saveButton.layer.cornerRadius = 5
         saveButton.addTarget(self, action: #selector(didTapSaveButton), for: .touchUpInside)
         loadingIndicator.hidesWhenStopped = true
