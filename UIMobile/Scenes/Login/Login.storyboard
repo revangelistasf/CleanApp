@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SignUp-->
+        <!--Login-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" id="Y6W-OH-hqX" userLabel="SignUp" customClass="SignUpViewController" customModule="UIMobile" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="Y6W-OH-hqX" userLabel="Login" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,37 +37,27 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7h9-c5-vHx" userLabel="Form Stack View">
                                 <rect key="frame" x="24" y="285" width="345" height="509"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Li-za-w8H" userLabel="Title">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Li-za-w8H" userLabel="Title">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="0.33725490200000002" green="0.0" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4e6-7a-Hwo" customClass="RoundedTextField" customModule="UIMobile" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cqr-r8-MSY" customClass="RoundedTextField" customModule="UIMobile" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="40" width="345" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="kOT-gh-SGp"/>
+                                            <constraint firstAttribute="height" constant="40" id="zLP-gn-vJP"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cqr-r8-MSY" customClass="RoundedTextField" customModule="UIMobile" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1H8-Z7-bbS" customClass="RoundedTextField" customModule="UIMobile" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="96" width="345" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1H8-Z7-bbS" customClass="RoundedTextField" customModule="UIMobile" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="152" width="345" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password Confirmation" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XpY-im-bI7" customClass="RoundedTextField" customModule="UIMobile" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="208" width="345" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNG-hL-RCj" userLabel="Button View">
-                                        <rect key="frame" x="0.0" y="264" width="345" height="76"/>
+                                        <rect key="frame" x="0.0" y="152" width="345" height="76"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwQ-vx-3EC">
                                                 <rect key="frame" x="0.0" y="16" width="345" height="60"/>
@@ -78,7 +68,7 @@
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="SIGN UP"/>
+                                                <state key="normal" title="ENTER"/>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -89,7 +79,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNQ-Ww-uFj" userLabel="Spacer View">
-                                        <rect key="frame" x="0.0" y="356" width="345" height="153"/>
+                                        <rect key="frame" x="0.0" y="244" width="345" height="265"/>
                                         <subviews>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="BPT-y7-pam">
                                                 <rect key="frame" x="154" y="16" width="37" height="37"/>
@@ -103,9 +93,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="XpY-im-bI7" firstAttribute="height" secondItem="4e6-7a-Hwo" secondAttribute="height" id="UgZ-8E-z10"/>
-                                    <constraint firstItem="1H8-Z7-bbS" firstAttribute="height" secondItem="4e6-7a-Hwo" secondAttribute="height" id="icB-lF-ihG"/>
-                                    <constraint firstItem="cqr-r8-MSY" firstAttribute="height" secondItem="4e6-7a-Hwo" secondAttribute="height" id="qiL-Bs-oyv"/>
+                                    <constraint firstItem="1H8-Z7-bbS" firstAttribute="height" secondItem="cqr-r8-MSY" secondAttribute="height" id="KBP-7E-Fkd"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -124,8 +112,6 @@
                     <connections>
                         <outlet property="emailTextField" destination="cqr-r8-MSY" id="GAs-A7-JPm"/>
                         <outlet property="loadingIndicator" destination="BPT-y7-pam" id="M0J-HS-Ctd"/>
-                        <outlet property="nameTextField" destination="4e6-7a-Hwo" id="0bX-Tc-oXn"/>
-                        <outlet property="passwordConfirmationTextField" destination="XpY-im-bI7" id="eHK-8s-HXd"/>
                         <outlet property="passwordTextField" destination="1H8-Z7-bbS" id="aXj-Sl-YOE"/>
                         <outlet property="saveButton" destination="lwQ-vx-3EC" id="GdM-of-uAJ"/>
                     </connections>
