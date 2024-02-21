@@ -1,4 +1,3 @@
-import Foundation
 import Domain
 
 func makeAccountModel() -> AccountModel {
@@ -12,4 +11,8 @@ func makeAddAccountModel() -> AddAccountModel {
         password: "any_password",
         passwordConfirmation: "any_password"
     )
+}
+
+func makeAuthenticationModel() -> AuthenticationModel {
+    AuthenticationModel(email: "any_email@mail.com", password: "any_password")
 }

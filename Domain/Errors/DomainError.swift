@@ -1,6 +1,7 @@
 import Foundation
 
 public enum DomainError: Error {
-    case emailInUse
     case unexpected
+    case emailInUse
+    case sessionExpired
 }

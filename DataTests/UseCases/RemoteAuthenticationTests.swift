@@ -2,55 +2,57 @@ import XCTest
 import Domain
 import Data
 
-class RemoteAddAccountTests: XCTestCase {
-    func test_add_httpClientIsCalledWithCorrectUrl() {
+class RemoteAuthenticationTests: XCTestCase {
+    func test_auth_httpClientIsCalledWithCorrectUrl() {
         let url = makeUrl()
         let (sut, httpClientSpy) = makeSut(url: url)
-        sut.add(addAccountModel: makeAddAccountModel()) { _ in }
+        sut.auth(authenticationModel: makeAuthenticationModel()) { _ in }
         XCTAssertEqual(httpClientSpy.urls, [url])
     }
-
-    func test_add_httpClientIsCalledWithCorrectData() {
+    
+    func test_auth_httpClientIsCalledWithCorrectData() {
         let (sut, httpClientSpy) = makeSut()
-        let addAccountModel = makeAddAccountModel()
-        sut.add(addAccountModel: addAccountModel)  { _ in }
-        XCTAssertEqual(httpClientSpy.data, addAccountModel.toData())
+        let authenticationModel = makeAuthenticationModel()
+        sut.auth(authenticationModel: authenticationModel) { _ in }
+        XCTAssertEqual(httpClientSpy.data, authenticationModel.toData())
     }
-
-    func test_add_httpClientCompleteWithNoConnectivity_completeWithUnexpectedError() {
+    
+    func test_auth_httpClientCompleteWithNoConnectivity_completeWithUnexpectedError() {
         let (sut, httpClientSpy) = makeSut()
         expect(sut, completeWith: .failure(.unexpected)) {
             httpClientSpy.completeWith(.noConnectivity)
         }
     }
-
-    func test_add_httpClientCompleteWithForbidden_completeWithEmailInUse() {
+    
+    func test_auth_httpClientCompleteWithUnauthorized_completeWithSessionExpiredError() {
         let (sut, httpClientSpy) = makeSut()
-        expect(sut, completeWith: .failure(.emailInUse)) {
-            httpClientSpy.completeWith(.forbidden)
+        expect(sut, completeWith: .failure(.sessionExpired)) {
+            httpClientSpy.completeWith(.unauthorized)
         }
     }
 
-    func test_add_completeWithAccountModel_whenHttpClientCompleteWithValidData() {
+    func test_auth_doHttpClientSuccessWithValidData_completeWithAuthenticationModel() {
         let (sut, httpClientSpy) = makeSut()
         let account = makeAccountModel()
         expect(sut, completeWith: .success(account)) {
             httpClientSpy.completeWith(account.toData()!)
         }
-    }    
-
-    func test_add_completeWithError_whenHttpClientCompleteWithInvalidData() {
+    }
+    
+    func test_auth_doHttpClientSuccessWithInvalidData_completeWithAuthenticationModel() {
         let (sut, httpClientSpy) = makeSut()
+        let account = makeAccountModel()
         expect(sut, completeWith: .failure(.unexpected)) {
             httpClientSpy.completeWith(makeInvalidData())
         }
     }
-
-    func test_add_doesNotComplete_sutHasBeenDeallocated() {
+    
+    
+    func test_auth_doesSutDeallocated_doesNotComplete() {
         let httpClientSpy = HttpClientSpy()
-        var sut: RemoteAddAccount? = RemoteAddAccount(url: makeUrl(), httpClient: httpClientSpy)
-        var result: AddAccount.Result?
-        sut?.add(addAccountModel: makeAddAccountModel()) { result = $0 }
+        var sut: RemoteAuthentication? = RemoteAuthentication(url: makeUrl(), httpClient: httpClientSpy)
+        var result: Authentication.Result?
+        sut?.auth(authenticationModel: makeAuthenticationModel()) { result = $0 }
         sut = nil
         httpClientSpy.completeWith(.noConnectivity)
         XCTAssertNil(result)
@@ -58,28 +60,28 @@ class RemoteAddAccountTests: XCTestCase {
 }
 
 // MARK: - Helpers
-extension RemoteAddAccountTests {
+extension RemoteAuthenticationTests {
     func makeSut(
         url: URL = URL(string: "https://any-url.com")!,
         file: StaticString = #filePath,
         line: UInt = #line
-    ) -> (sut: RemoteAddAccount, httpClientSpy: HttpClientSpy) {
+    ) -> (sut: RemoteAuthentication, httpClientSpy: HttpClientSpy) {
         let httpClientSpy = HttpClientSpy()
-        let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
+        let sut = RemoteAuthentication(url: url, httpClient: httpClientSpy)
         checkMemoryLeak(for: sut, file: file, line: line)
         checkMemoryLeak(for: httpClientSpy, file: file, line: line)
         return (sut, httpClientSpy)
     }
 
     func expect(
-        _ sut: RemoteAddAccount,
-        completeWith expectedResult: AddAccount.Result,
-        when action: () -> Void, 
+        _ sut: RemoteAuthentication,
+        completeWith expectedResult: Authentication.Result,
+        when action: () -> Void,
         file: StaticString = #filePath,
         line: UInt = #line
     ) {
         let exp = expectation(description: "waiting")
-        sut.add(addAccountModel: makeAddAccountModel()) { receivedResult in
+        sut.auth(authenticationModel: makeAuthenticationModel()) { receivedResult in
             switch (expectedResult, receivedResult) {
             case (.failure(let expectedError), .failure(let receivedError)):
                 XCTAssertEqual(expectedError, receivedError, file: file, line: line)
