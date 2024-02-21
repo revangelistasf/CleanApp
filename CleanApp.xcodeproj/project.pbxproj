@@ -18,6 +18,7 @@
 		461064242B866DB700CF16A0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461064232B866DB700CF16A0 /* Login.storyboard */; };
 		461064272B866E4900CF16A0 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461064262B866E4900CF16A0 /* LoginViewControllerTests.swift */; };
 		461064292B866E9E00CF16A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461064282B866E9E00CF16A0 /* LoginViewController.swift */; };
+		4610642A2B867AD400CF16A0 /* XCTestCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9B0ADA2B473AFD009AD05D /* XCTestCase+Extensions.swift */; };
 		4647C5D92B536E8600830110 /* TestsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D12B536E8600830110 /* TestsFactory.swift */; };
 		4647C5DA2B536E8600830110 /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D32B536E8600830110 /* LoadingViewSpy.swift */; };
 		4647C5DB2B536E8600830110 /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D42B536E8600830110 /* AlertViewSpy.swift */; };
@@ -1798,6 +1799,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4610642A2B867AD400CF16A0 /* XCTestCase+Extensions.swift in Sources */,
 				461064272B866E4900CF16A0 /* LoginViewControllerTests.swift in Sources */,
 				46F716A22B7240F400EF701A /* SignUpViewControllerTests.swift in Sources */,
 				468379E02B73CD08003D2596 /* UIControl+Ext.swift in Sources */,

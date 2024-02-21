@@ -13,12 +13,28 @@ final class LoginViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut as LoadingView)
         XCTAssertNotNil(sut as AlertView)
     }
+    
+    
+    func test_loginButton_callsAuthOnTap() {
+        var loginViewModel: LoginViewModel?
+        let sut = makeSut(loginViewModel: { loginViewModel = $0 })
+        sut.loginButton?.simulateTap()
+        let email = sut.emailTextField.text
+        let password = sut.passwordTextField.text
+        XCTAssertEqual(loginViewModel, LoginViewModel(email: email, password: password))
+    }
 }
 
 extension LoginViewControllerTests {
-    private func makeSut() -> LoginViewController {
+    private func makeSut(
+        loginViewModel: ((LoginViewModel) -> Void)? = nil,
+        file: StaticString = #filePath,
+        line: UInt = #line
+    ) -> LoginViewController {
         let sut = LoginViewController.instantiate()
+        sut.login = loginViewModel
         sut.loadViewIfNeeded()
+        checkMemoryLeak(for: sut, file: file, line: line)
         return sut
     }
 }
