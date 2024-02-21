@@ -7,23 +7,128 @@ final class LoginPresenterTests: XCTestCase {
         let validationSpy = ValidationSpy()
         let sut = makeSut(validation: validationSpy)
         let viewModel = makeLoginViewModel()
-        sut.login(viewModel)
+        sut.login(viewModel: viewModel)
         XCTAssertTrue(
             NSDictionary(
                 dictionary: validationSpy.data!
             ).isEqual(to: viewModel.toJson()!)
         )
     }
+    
+    func test_login_validationFails_showErrorMessage() {
+        let alertViewSpy = AlertViewSpy()
+        let validationSpy = ValidationSpy()
+        let sut = makeSut(alertView: alertViewSpy, validation: validationSpy)
+        let exp = expectation(description: "waiting")
+        alertViewSpy.observe { viewModel in
+            XCTAssertEqual(
+                viewModel,
+                AlertViewModel(title: "Validation Failed", message: "Error")
+            )
+            exp.fulfill()
+        }
+        validationSpy.simulateError()
+        sut.login(viewModel: makeLoginViewModel())
+        wait(for: [exp], timeout: 1)
+    }
+    
+    func test_login_authenticationWithValidValues() {
+        let authenticationSpy = AuthenticationSpy()
+        let sut = makeSut(authentication: authenticationSpy)
+        sut.login(viewModel: makeLoginViewModel())
+        XCTAssertEqual(authenticationSpy.authenticationModel, makeAuthenticationModel())
+    }
+    
+    func test_login_authenticationFails_showGenericErrorAlert() {
+        let alertViewSpy = AlertViewSpy()
+        let authenticationSpy = AuthenticationSpy()
+        let sut = makeSut(authentication: authenticationSpy, alertView: alertViewSpy)
+        let exp = expectation(description: "waiting")
+        let alertViewModel = AlertViewModel(
+            title: "Error",
+            message: "Something went wrong, try again later."
+        )
+        alertViewSpy.observe { viewModel in
+            XCTAssertEqual(viewModel,alertViewModel)
+            exp.fulfill()
+        }
+        sut.login(viewModel: makeLoginViewModel())
+        authenticationSpy.completeWith(error: .unexpected)
+        wait(for: [exp], timeout: 1)
+    }
+    
+    func test_login_authenticationFailsWithSessionExpired_showExpiredSessionErrorAlert() {
+        let alertViewSpy = AlertViewSpy()
+        let authenticationSpy = AuthenticationSpy()
+        let sut = makeSut(authentication: authenticationSpy, alertView: alertViewSpy)
+        let exp = expectation(description: "waiting")
+        let alertViewModel = AlertViewModel(
+            title: "Error",
+            message: "Invalid Email/Password combination."
+        )
+        alertViewSpy.observe { viewModel in
+            XCTAssertEqual(viewModel,alertViewModel)
+            exp.fulfill()
+        }
+        sut.login(viewModel: makeLoginViewModel())
+        authenticationSpy.completeWith(error: .sessionExpired)
+        wait(for: [exp], timeout: 1)
+    }    
+
+    func test_login_authenticationRequest_showSuccessAlertIfRequestIsSuccess() {
+        let alertViewSpy = AlertViewSpy()
+        let authenticationSpy = AuthenticationSpy()
+        let sut = makeSut(authentication: authenticationSpy, alertView: alertViewSpy)
+        let exp = expectation(description: "waiting")
+        let alertViewModel = AlertViewModel(
+            title: "Success",
+            message: "Login successfully."
+        )
+        alertViewSpy.observe { viewModel in
+            XCTAssertEqual(viewModel, alertViewModel)
+            exp.fulfill()
+        }
+        sut.login(viewModel: makeLoginViewModel())
+        authenticationSpy.completeWith(account: makeAccountModel())
+        wait(for: [exp], timeout: 1)
+    }
+    
+    func test_login_doIsLoadingOnAuthentication_StartLoadingBeforeAndStopAfter() {
+        let loadingViewSpy = LoadingViewSpy()
+        let authenticationSpy = AuthenticationSpy()
+        let sut = makeSut(authentication: authenticationSpy, loadingView: loadingViewSpy)
+        let exp = expectation(description: "waiting")
+        loadingViewSpy.observe { viewModel in
+            XCTAssertEqual(viewModel, LoadingViewModel(isLoading: true))
+            exp.fulfill()
+        }
+        sut.login(viewModel: makeLoginViewModel())
+        wait(for: [exp], timeout: 1)
+
+        let exp2 = expectation(description: "waiting")
+        loadingViewSpy.observe { viewModel in
+            XCTAssertEqual(viewModel, LoadingViewModel(isLoading: false))
+            exp2.fulfill()
+        }
+        authenticationSpy.completeWith(error: .unexpected)
+        wait(for: [exp2], timeout: 1)
+    }
 }
 
 // MARK: - Helpers
 extension LoginPresenterTests {
     func makeSut(
+        authentication: Authentication = AuthenticationSpy(),
+        alertView: AlertView = AlertViewSpy(),
+        loadingView: LoadingView = LoadingViewSpy(),
         validation: Validation = ValidationSpy(),
         file: StaticString = #filePath,
         line: UInt = #line
     ) -> LoginPresenter {
         let sut = LoginPresenter(
+            authentication: authentication, 
+            alertView: alertView,
+            loadingView: loadingView,
             validation: validation
         )
         checkMemoryLeak(for: sut, file: file, line: line)

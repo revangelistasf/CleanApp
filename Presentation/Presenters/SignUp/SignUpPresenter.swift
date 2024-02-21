@@ -21,9 +21,7 @@ public final class SignUpPresenter {
     
     public func signUp(viewModel: SignUpViewModel) {
         if let message = validation.validate(data: viewModel.toJson()) {
-            alertView.showMessage(
-                viewModel: AlertViewModel(title: "Validation Failed", message: message)
-            )
+            showAlert(title: "Validation Failed", message: message)
         } else {
             loadingView.display(viewModel: LoadingViewModel(isLoading: true))
             addAccount.add(addAccountModel: viewModel.toAddAccountModel()) { [weak self] result in
@@ -44,7 +42,7 @@ public final class SignUpPresenter {
         }
     }
     
-    func showAlert(title: String = "Error", message: String) {
+    private func showAlert(title: String = "Error", message: String) {
         alertView.showMessage(viewModel: AlertViewModel(title: title, message: message))
     }
 }
