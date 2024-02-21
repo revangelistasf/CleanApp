@@ -16,6 +16,8 @@
 		460D79272B7E36760096A21E /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 468379EB2B74CF66003D2596 /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		460D792D2B7E55CC0096A21E /* RequiredFieldValidationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460D792C2B7E55CC0096A21E /* RequiredFieldValidationTests.swift */; };
 		461064242B866DB700CF16A0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461064232B866DB700CF16A0 /* Login.storyboard */; };
+		461064272B866E4900CF16A0 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461064262B866E4900CF16A0 /* LoginViewControllerTests.swift */; };
+		461064292B866E9E00CF16A0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461064282B866E9E00CF16A0 /* LoginViewController.swift */; };
 		4647C5D92B536E8600830110 /* TestsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D12B536E8600830110 /* TestsFactory.swift */; };
 		4647C5DA2B536E8600830110 /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D32B536E8600830110 /* LoadingViewSpy.swift */; };
 		4647C5DB2B536E8600830110 /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D42B536E8600830110 /* AlertViewSpy.swift */; };
@@ -364,6 +366,8 @@
 		460D791E2B7E35630096A21E /* ValidationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationSpy.swift; sourceTree = "<group>"; };
 		460D792C2B7E55CC0096A21E /* RequiredFieldValidationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredFieldValidationTests.swift; sourceTree = "<group>"; };
 		461064232B866DB700CF16A0 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		461064262B866E4900CF16A0 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		461064282B866E9E00CF16A0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4647C5D12B536E8600830110 /* TestsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsFactory.swift; sourceTree = "<group>"; };
 		4647C5D32B536E8600830110 /* LoadingViewSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewSpy.swift; sourceTree = "<group>"; };
 		4647C5D42B536E8600830110 /* AlertViewSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
@@ -613,7 +617,16 @@
 		461064222B866D9300CF16A0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				461064282B866E9E00CF16A0 /* LoginViewController.swift */,
 				461064232B866DB700CF16A0 /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		461064252B866E3E00CF16A0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				461064262B866E4900CF16A0 /* LoginViewControllerTests.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -792,6 +805,7 @@
 		468379DD2B73CCEA003D2596 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				461064252B866E3E00CF16A0 /* Login */,
 				468379DB2B73CCA4003D2596 /* SignUp */,
 			);
 			path = Scenes;
@@ -1773,6 +1787,7 @@
 				464B204C2B84FA21003865CC /* RoundedTextField.swift in Sources */,
 				464B20472B84F856003865CC /* UIColor+Ext.swift in Sources */,
 				46F716AE2B72644300EF701A /* SignUpViewController.swift in Sources */,
+				461064292B866E9E00CF16A0 /* LoginViewController.swift in Sources */,
 				464B20492B84F8A8003865CC /* Color.swift in Sources */,
 				464B204E2B84FBD6003865CC /* NavigationController.swift in Sources */,
 				468379E52B73FDCD003D2596 /* Storyboarded.swift in Sources */,
@@ -1783,6 +1798,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461064272B866E4900CF16A0 /* LoginViewControllerTests.swift in Sources */,
 				46F716A22B7240F400EF701A /* SignUpViewControllerTests.swift in Sources */,
 				468379E02B73CD08003D2596 /* UIControl+Ext.swift in Sources */,
 			);
