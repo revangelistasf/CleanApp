@@ -16,11 +16,6 @@ public final class SignUpViewController: UIViewController, Storyboarded {
         setup()
     }
     
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-    
     private func setup() {
         title = "4Dev"
         saveButton.layer.cornerRadius = 5
@@ -44,6 +39,7 @@ public final class SignUpViewController: UIViewController, Storyboarded {
 extension SignUpViewController: LoadingView {
     public func display(viewModel:  LoadingViewModel) {
         viewModel.isLoading ? loadingIndicator.startAnimating() : loadingIndicator.stopAnimating()
+        view.isUserInteractionEnabled = !viewModel.isLoading
     }
 }
 
