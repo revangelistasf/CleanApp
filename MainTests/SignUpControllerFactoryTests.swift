@@ -3,7 +3,7 @@ import Main
 import UIMobile
 import Validation
 
-final class SignUpComposerTests: XCTestCase {
+final class SignUpControllerFactoryTests: XCTestCase {
     func test_backgroundRequest_shouldCompleteOnMainThread() {
         let (sut, addAccountSpy) = makeSut()
         sut.loadViewIfNeeded()
@@ -56,13 +56,13 @@ final class SignUpComposerTests: XCTestCase {
     }
 }
 
-extension SignUpComposerTests {
+extension SignUpControllerFactoryTests {
     private func makeSut(
         file: StaticString = #filePath,
         line: UInt = #line
     ) -> (sut: SignUpViewController, addAccountSpy: AddAccountSpy) {
         let addAccountSpy = AddAccountSpy()
-        let sut = makeSignUpController(addAccount: addAccountSpy)
+        let sut = makeSignUpController(addAccount: MainDispatchQueueDecorator(addAccountSpy))
         checkMemoryLeak(for: sut, file: file, line: line)
         checkMemoryLeak(for: addAccountSpy, file: file, line: line)
         return (sut, addAccountSpy)
