@@ -15,10 +15,9 @@ func makeSignUpViewModel(
     )
 }
 
-func makeErrorAlertViewModel(message: String) -> AlertViewModel {
-    AlertViewModel(title: "Error", message: message)
-}
-
-func makeSuccessAlertViewModel(message: String) -> AlertViewModel {
-    AlertViewModel(title: "Success", message: message)
+func makeLoginViewModel(
+    email: String? = "any_email@mail.com",
+    password: String? = "any_password"
+) -> LoginViewModel {
+    return LoginViewModel(email: email, password: password)
 }

@@ -35,6 +35,9 @@
 		464B20522B852070003865CC /* RemoteAuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B20512B852070003865CC /* RemoteAuthenticationTests.swift */; };
 		464B20542B8529E4003865CC /* RemoteAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B20532B8529E4003865CC /* RemoteAuthentication.swift */; };
 		464B20572B860411003865CC /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B20562B860411003865CC /* HttpClientSpy.swift */; };
+		464B205C2B86424A003865CC /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B205B2B86424A003865CC /* LoginPresenterTests.swift */; };
+		464B205E2B8642DB003865CC /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B205D2B8642DB003865CC /* LoginPresenter.swift */; };
+		464B20602B864CC2003865CC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B205F2B864CC2003865CC /* LoginViewModel.swift */; };
 		46713FB32B7BB37600993F7F /* TestsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D12B536E8600830110 /* TestsFactory.swift */; };
 		468379D52B72656A003D2596 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9986F02B4C39CA00623B05 /* Presentation.framework */; };
 		468379D62B72656A003D2596 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA9986F02B4C39CA00623B05 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -380,6 +383,9 @@
 		464B20512B852070003865CC /* RemoteAuthenticationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationTests.swift; sourceTree = "<group>"; };
 		464B20532B8529E4003865CC /* RemoteAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAuthentication.swift; sourceTree = "<group>"; };
 		464B20562B860411003865CC /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
+		464B205B2B86424A003865CC /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
+		464B205D2B8642DB003865CC /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		464B205F2B864CC2003865CC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		468379DF2B73CD08003D2596 /* UIControl+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Ext.swift"; sourceTree = "<group>"; };
 		468379E22B73FCB1003D2596 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		468379E42B73FDCD003D2596 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -636,6 +642,7 @@
 		4647C5DE2B536EC500830110 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				464B20582B86358B003865CC /* Login */,
 				4647C5DF2B536EC500830110 /* SignUp */,
 			);
 			path = Presenters;
@@ -716,6 +723,31 @@
 				464B20562B860411003865CC /* HttpClientSpy.swift */,
 			);
 			path = Http;
+			sourceTree = "<group>";
+		};
+		464B20582B86358B003865CC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				464B205D2B8642DB003865CC /* LoginPresenter.swift */,
+				464B205F2B864CC2003865CC /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		464B20592B864236003865CC /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				DA9986FC2B4C39CA00623B05 /* SignUpPresenterTests.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		464B205A2B86423D003865CC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				464B205B2B86424A003865CC /* LoginPresenterTests.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		468379DA2B73CC91003D2596 /* SignUp */ = {
@@ -948,7 +980,8 @@
 		DA9987102B4C4E8E00623B05 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				DA9986FC2B4C39CA00623B05 /* SignUpPresenterTests.swift */,
+				464B205A2B86423D003865CC /* Login */,
+				464B20592B864236003865CC /* SignUp */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -1752,11 +1785,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				464B205E2B8642DB003865CC /* LoginPresenter.swift in Sources */,
 				4647C5EC2B536EC500830110 /* AlertView.swift in Sources */,
 				4647C5EA2B536EC500830110 /* SignUpPresenter.swift in Sources */,
 				460D791C2B7E346A0096A21E /* Validation.swift in Sources */,
 				4647C5E82B536EC500830110 /* SignUpViewModel.swift in Sources */,
 				4647C5ED2B536EC500830110 /* LoadingView.swift in Sources */,
+				464B20602B864CC2003865CC /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1765,6 +1800,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				460D791F2B7E35630096A21E /* ValidationSpy.swift in Sources */,
+				464B205C2B86424A003865CC /* LoginPresenterTests.swift in Sources */,
 				4647C5DD2B536E8600830110 /* AddAccountSpy.swift in Sources */,
 				4647C5DA2B536E8600830110 /* LoadingViewSpy.swift in Sources */,
 				4647C5D92B536E8600830110 /* TestsFactory.swift in Sources */,
