@@ -25,6 +25,7 @@
 		461064312B86809100CF16A0 /* RemoteAuthenticationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461064302B86809100CF16A0 /* RemoteAuthenticationFactory.swift */; };
 		461064342B873F3B00CF16A0 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461064332B873F3B00CF16A0 /* Welcome.storyboard */; };
 		461064372B8744A900CF16A0 /* WelcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461064362B8744A900CF16A0 /* WelcomeViewControllerTests.swift */; };
+		461064392B8745F800CF16A0 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461064382B8745F800CF16A0 /* WelcomeViewController.swift */; };
 		4647C5D92B536E8600830110 /* TestsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D12B536E8600830110 /* TestsFactory.swift */; };
 		4647C5DA2B536E8600830110 /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D32B536E8600830110 /* LoadingViewSpy.swift */; };
 		4647C5DB2B536E8600830110 /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D42B536E8600830110 /* AlertViewSpy.swift */; };
@@ -380,6 +381,7 @@
 		461064302B86809100CF16A0 /* RemoteAuthenticationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationFactory.swift; sourceTree = "<group>"; };
 		461064332B873F3B00CF16A0 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		461064362B8744A900CF16A0 /* WelcomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerTests.swift; sourceTree = "<group>"; };
+		461064382B8745F800CF16A0 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		4647C5D12B536E8600830110 /* TestsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsFactory.swift; sourceTree = "<group>"; };
 		4647C5D32B536E8600830110 /* LoadingViewSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewSpy.swift; sourceTree = "<group>"; };
 		4647C5D42B536E8600830110 /* AlertViewSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
@@ -646,6 +648,7 @@
 		461064322B873F2C00CF16A0 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				461064382B8745F800CF16A0 /* WelcomeViewController.swift */,
 				461064332B873F3B00CF16A0 /* Welcome.storyboard */,
 			);
 			path = Welcome;
@@ -1821,6 +1824,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				461064392B8745F800CF16A0 /* WelcomeViewController.swift in Sources */,
 				468379E32B73FCB1003D2596 /* UIViewController+Ext.swift in Sources */,
 				464B204C2B84FA21003865CC /* RoundedTextField.swift in Sources */,
 				464B20472B84F856003865CC /* UIColor+Ext.swift in Sources */,

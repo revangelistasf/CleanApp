@@ -4,36 +4,40 @@ import Presentation
 @testable import UIMobile
 
 final class WelcomeViewControllerTests: XCTestCase {
-    func test_saveButton_callsSignUpOnTap() {
-        var signUpViewModel: SignUpViewModel?
-        let sut = makeSut(signUpViewModel: { signUpViewModel = $0 })
-        sut.saveButton?.simulateTap()
-        let name = sut.nameTextField?.text
-        let email = sut.emailTextField.text
-        let password = sut.passwordTextField.text
-        let passwordConfirmation = sut.passwordConfirmationTextField.text
-        XCTAssertEqual(
-            signUpViewModel,
-            SignUpViewModel(
-                name: name,
-                email: email,
-                password: password,
-                passwordConfirmation: passwordConfirmation
-            )
-        )
+    func test_loginButton_callsLoginOnTap() {
+        let buttonSpy = ButtonSpy()
+        let sut = makeSut(buttonSpy: buttonSpy)
+        sut.loginButton?.simulateTap()
+        XCTAssertEqual(buttonSpy.clicks, 1)
+    }
+
+    func test_signUpButton_callsSignUpOnTap() {
+        let buttonSpy = ButtonSpy()
+        let sut = makeSut(buttonSpy: buttonSpy)
+        sut.signUpButton?.simulateTap()
+        XCTAssertEqual(buttonSpy.clicks, 1)
     }
 }
 
 extension WelcomeViewControllerTests {
     private func makeSut(
-        signUpViewModel: ((SignUpViewModel) -> Void)? = nil,
+        buttonSpy: ButtonSpy = ButtonSpy(),
         file: StaticString = #filePath,
         line: UInt = #line
-    ) -> SignUpViewController {
-        let sut = SignUpViewController.instantiate()
-        sut.signUp = signUpViewModel
+    ) -> WelcomeViewController {
+        let sut = WelcomeViewController.instantiate()
+        sut.login = buttonSpy.onClick
+        sut.signUp = buttonSpy.onClick
         sut.loadViewIfNeeded()
         checkMemoryLeak(for: sut, file: file, line: line)
         return sut
+    }
+    
+    class ButtonSpy {
+        var clicks = 0
+        
+        func onClick() {
+            clicks += 1
+        }
     }
 }

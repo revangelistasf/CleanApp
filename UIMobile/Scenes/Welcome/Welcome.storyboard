@@ -11,7 +11,7 @@
         <!--Welcome-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="WelcomeViewController" id="Y6W-OH-hqX" userLabel="Welcome" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="Y6W-OH-hqX" userLabel="Welcome" customClass="WelcomeViewController" customModule="UIMobile" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -89,6 +89,10 @@
                             <constraint firstItem="7h9-c5-vHx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="as0-Gr-odL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="kxF-Eo-MVf" id="Ohp-bB-dcT"/>
+                        <outlet property="signUpButton" destination="PlX-yR-fgt" id="qxu-3S-NAn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
