@@ -18,6 +18,6 @@ func makeSignUpRequestModel(
 func makeLoginRequest(
     email: String? = "any_email@mail.com",
     password: String? = "any_password"
-) -> LoginRequest {
-    return LoginRequest(email: email, password: password)
+) -> LoginRequestModel {
+    return LoginRequestModel(email: email, password: password)
 }

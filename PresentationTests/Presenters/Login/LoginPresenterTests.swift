@@ -7,7 +7,7 @@ final class LoginPresenterTests: XCTestCase {
         let validationSpy = ValidationSpy()
         let sut = makeSut(validation: validationSpy)
         let loginRequest = makeLoginRequest()
-        sut.login(viewModel: loginRequest)
+        sut.login(requestModel: loginRequest)
         XCTAssertTrue(
             NSDictionary(dictionary: validationSpy.data!).isEqual(to: loginRequest.toJson()!)
         )
@@ -26,14 +26,14 @@ final class LoginPresenterTests: XCTestCase {
             exp.fulfill()
         }
         validationSpy.simulateError()
-        sut.login(viewModel: makeLoginRequest())
+        sut.login(requestModel: makeLoginRequest())
         wait(for: [exp], timeout: 1)
     }
     
     func test_login_authenticationWithValidValues() {
         let authenticationSpy = AuthenticationSpy()
         let sut = makeSut(authentication: authenticationSpy)
-        sut.login(viewModel: makeLoginRequest())
+        sut.login(requestModel: makeLoginRequest())
         XCTAssertEqual(authenticationSpy.authenticationModel, makeAuthenticationModel())
     }
     
@@ -50,7 +50,7 @@ final class LoginPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel,alertViewModel)
             exp.fulfill()
         }
-        sut.login(viewModel: makeLoginRequest())
+        sut.login(requestModel: makeLoginRequest())
         authenticationSpy.completeWith(error: .unexpected)
         wait(for: [exp], timeout: 1)
     }
@@ -68,7 +68,7 @@ final class LoginPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel,alertViewModel)
             exp.fulfill()
         }
-        sut.login(viewModel: makeLoginRequest())
+        sut.login(requestModel: makeLoginRequest())
         authenticationSpy.completeWith(error: .sessionExpired)
         wait(for: [exp], timeout: 1)
     }    
@@ -86,7 +86,7 @@ final class LoginPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel, alertViewModel)
             exp.fulfill()
         }
-        sut.login(viewModel: makeLoginRequest())
+        sut.login(requestModel: makeLoginRequest())
         authenticationSpy.completeWith(account: makeAccountModel())
         wait(for: [exp], timeout: 1)
     }
@@ -100,7 +100,7 @@ final class LoginPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel, LoadingViewModel(isLoading: true))
             exp.fulfill()
         }
-        sut.login(viewModel: makeLoginRequest())
+        sut.login(requestModel: makeLoginRequest())
         wait(for: [exp], timeout: 1)
 
         let exp2 = expectation(description: "waiting")

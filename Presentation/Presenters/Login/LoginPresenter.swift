@@ -19,12 +19,12 @@ public final class LoginPresenter {
         self.validation = validation
     }
     
-    public func login(viewModel: LoginRequest) {
-        if let errorMessage = validation.validate(data: viewModel.toJson()) {
+    public func login(requestModel: LoginRequestModel) {
+        if let errorMessage = validation.validate(data: requestModel.toJson()) {
             showAlert(title: "Validation Failed", message: errorMessage)
         } else {
             loadingView.display(viewModel: LoadingViewModel(isLoading: true))
-            let authenticationModel = viewModel.toAuthenticationModel()
+            let authenticationModel = requestModel.toAuthenticationModel()
             authentication.auth(authenticationModel: authenticationModel) { [weak self] result in
                 guard let self else { return }
                 loadingView.display(viewModel: LoadingViewModel(isLoading: false))
