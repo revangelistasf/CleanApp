@@ -1,13 +1,13 @@
 import Foundation
 import Presentation
 
-func makeSignUpViewModel(
+func makeSignUpRequestModel(
     name: String? = "any_name",
     email: String? = "any_email@mail.com",
     password: String? = "any_password",
     passwordConfirmation: String? = "any_password"
-) -> SignUpViewModel {
-    return SignUpViewModel(
+) -> SignUpRequestModel {
+    return SignUpRequestModel(
         name: name,
         email: email,
         password: password,

@@ -9,7 +9,7 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var passwordConfirmationTextField: UITextField!
     
-    public var signUp: ((SignUpViewModel) -> Void)?
+    public var signUp: ((SignUpRequestModel) -> Void)?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     }
 
     @objc private func didTapSaveButton() {
-        let signUpViewModel = SignUpViewModel(
+        let signUpViewModel = SignUpRequestModel(
             name: nameTextField.text,
             email: emailTextField.text,
             password: passwordTextField.text,

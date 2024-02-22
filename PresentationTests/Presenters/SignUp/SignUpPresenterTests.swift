@@ -6,7 +6,7 @@ class SignUpPresenterTests: XCTestCase {
     func test_signUp_addAccountRequest_withValidValues() {
         let addAccountSpy = AddAccountSpy()
         let sut = makeSut(addAccount: addAccountSpy)
-        sut.signUp(viewModel: makeSignUpViewModel())
+        sut.signUp(requestModel: makeSignUpRequestModel())
         XCTAssertEqual(addAccountSpy.addAccountModel, makeAddAccountModel())
     }
 
@@ -23,7 +23,7 @@ class SignUpPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel,alertViewModel)
             exp.fulfill()
         }
-        sut.signUp(viewModel: makeSignUpViewModel())
+        sut.signUp(requestModel: makeSignUpRequestModel())
         addAccountSpy.completeWith(error: .unexpected)
         wait(for: [exp], timeout: 1)
     }
@@ -41,7 +41,7 @@ class SignUpPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel,alertViewModel)
             exp.fulfill()
         }
-        sut.signUp(viewModel: makeSignUpViewModel())
+        sut.signUp(requestModel: makeSignUpRequestModel())
         addAccountSpy.completeWith(error: .emailInUse)
         wait(for: [exp], timeout: 1)
     }
@@ -59,7 +59,7 @@ class SignUpPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel, alertViewModel)
             exp.fulfill()
         }
-        sut.signUp(viewModel: makeSignUpViewModel())
+        sut.signUp(requestModel: makeSignUpRequestModel())
         addAccountSpy.completeWith(account: makeAccountModel())
         wait(for: [exp], timeout: 1)
     }
@@ -73,7 +73,7 @@ class SignUpPresenterTests: XCTestCase {
             XCTAssertEqual(viewModel, LoadingViewModel(isLoading: true))
             exp.fulfill()
         }
-        sut.signUp(viewModel: makeSignUpViewModel())
+        sut.signUp(requestModel: makeSignUpRequestModel())
         wait(for: [exp], timeout: 1)
 
         let exp2 = expectation(description: "waiting")
@@ -88,9 +88,11 @@ class SignUpPresenterTests: XCTestCase {
     func test_signUp_shouldCallValidationWithCorrectValues() {
         let validationSpy = ValidationSpy()
         let sut = makeSut(validation: validationSpy)
-        let viewModel = makeSignUpViewModel()
-        sut.signUp(viewModel: viewModel)
-        XCTAssertTrue(NSDictionary(dictionary: validationSpy.data!).isEqual(to: viewModel.toJson()!))
+        let requestModel = makeSignUpRequestModel()
+        sut.signUp(requestModel: requestModel)
+        XCTAssertTrue(
+            NSDictionary(dictionary: validationSpy.data!).isEqual(to: requestModel.toJson()!)
+        )
     }
     
     func test_signUp_validationFails_showErrorMessage() {
@@ -106,7 +108,7 @@ class SignUpPresenterTests: XCTestCase {
             exp.fulfill()
         }
         validationSpy.simulateError()
-        sut.signUp(viewModel: makeSignUpViewModel())
+        sut.signUp(requestModel: makeSignUpRequestModel())
         wait(for: [exp], timeout: 1)
     }
 }

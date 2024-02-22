@@ -30,7 +30,7 @@
 		4647C5DA2B536E8600830110 /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D32B536E8600830110 /* LoadingViewSpy.swift */; };
 		4647C5DB2B536E8600830110 /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D42B536E8600830110 /* AlertViewSpy.swift */; };
 		4647C5DD2B536E8600830110 /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D82B536E8600830110 /* AddAccountSpy.swift */; };
-		4647C5E82B536EC500830110 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5E02B536EC500830110 /* SignUpViewModel.swift */; };
+		4647C5E82B536EC500830110 /* SignUpRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5E02B536EC500830110 /* SignUpRequestModel.swift */; };
 		4647C5EA2B536EC500830110 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5E22B536EC500830110 /* SignUpPresenter.swift */; };
 		4647C5EC2B536EC500830110 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5E62B536EC500830110 /* AlertView.swift */; };
 		4647C5ED2B536EC500830110 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5E72B536EC500830110 /* LoadingView.swift */; };
@@ -387,7 +387,7 @@
 		4647C5D42B536E8600830110 /* AlertViewSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
 		4647C5D62B536E8600830110 /* EmailValidatorSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidatorSpy.swift; sourceTree = "<group>"; };
 		4647C5D82B536E8600830110 /* AddAccountSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccountSpy.swift; sourceTree = "<group>"; };
-		4647C5E02B536EC500830110 /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		4647C5E02B536EC500830110 /* SignUpRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpRequestModel.swift; sourceTree = "<group>"; };
 		4647C5E22B536EC500830110 /* SignUpPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		4647C5E42B536EC500830110 /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
 		4647C5E62B536EC500830110 /* AlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
@@ -708,7 +708,7 @@
 		4647C5DF2B536EC500830110 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				4647C5E02B536EC500830110 /* SignUpViewModel.swift */,
+				4647C5E02B536EC500830110 /* SignUpRequestModel.swift */,
 				4647C5E22B536EC500830110 /* SignUpPresenter.swift */,
 			);
 			path = SignUp;
@@ -1864,7 +1864,7 @@
 				4647C5EC2B536EC500830110 /* AlertView.swift in Sources */,
 				4647C5EA2B536EC500830110 /* SignUpPresenter.swift in Sources */,
 				460D791C2B7E346A0096A21E /* Validation.swift in Sources */,
-				4647C5E82B536EC500830110 /* SignUpViewModel.swift in Sources */,
+				4647C5E82B536EC500830110 /* SignUpRequestModel.swift in Sources */,
 				4647C5ED2B536EC500830110 /* LoadingView.swift in Sources */,
 				464B20602B864CC2003865CC /* LoginRequest.swift in Sources */,
 			);

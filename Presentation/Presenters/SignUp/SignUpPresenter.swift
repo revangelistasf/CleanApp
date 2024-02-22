@@ -19,12 +19,12 @@ public final class SignUpPresenter {
         self.validation = validation
     }
     
-    public func signUp(viewModel: SignUpViewModel) {
-        if let message = validation.validate(data: viewModel.toJson()) {
+    public func signUp(requestModel: SignUpRequestModel) {
+        if let message = validation.validate(data: requestModel.toJson()) {
             showAlert(title: "Validation Failed", message: message)
         } else {
             loadingView.display(viewModel: LoadingViewModel(isLoading: true))
-            addAccount.add(addAccountModel: viewModel.toAddAccountModel()) { [weak self] result in
+            addAccount.add(addAccountModel: requestModel.toAddAccountModel()) { [weak self] result in
                 guard let self else { return }
                 self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
                 switch result {
