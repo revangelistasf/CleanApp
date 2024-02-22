@@ -49,12 +49,12 @@
                                             <constraint firstAttribute="height" constant="40" id="zLP-gn-vJP"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1H8-Z7-bbS" customClass="RoundedTextField" customModule="UIMobile" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="96" width="345" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="password"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FNG-hL-RCj" userLabel="Button View">
                                         <rect key="frame" x="0.0" y="152" width="345" height="76"/>
