@@ -93,6 +93,7 @@
 		46C260412B8257F9002D7777 /* ValidationComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C260402B8257F9002D7777 /* ValidationComposite.swift */; };
 		46C260442B82585E002D7777 /* ValidationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46C260432B82585E002D7777 /* ValidationSpy.swift */; };
 		46C260472B829982002D7777 /* EmailValidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D62B536E8600830110 /* EmailValidatorSpy.swift */; };
+		46D1F9832B879FC500357436 /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D1F9822B879FC500357436 /* WelcomeRouterTests.swift */; };
 		46D43B752B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D43B742B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift */; };
 		46F3CB6A2B7FB415007F5F8D /* RequiredFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3CB692B7FB415007F5F8D /* RequiredFieldValidation.swift */; };
 		46F7169D2B7240F400EF701A /* UIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F716932B7240F400EF701A /* UIMobile.framework */; };
@@ -437,6 +438,7 @@
 		46C260402B8257F9002D7777 /* ValidationComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationComposite.swift; sourceTree = "<group>"; };
 		46C260432B82585E002D7777 /* ValidationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationSpy.swift; sourceTree = "<group>"; };
 		46C260492B829F88002D7777 /* Core.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Core.xctestplan; sourceTree = "<group>"; };
+		46D1F9822B879FC500357436 /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
 		46D43B742B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDispatchQueueDecorator.swift; sourceTree = "<group>"; };
 		46F3CB662B7FB23A007F5F8D /* Validation.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Validation.xctestplan; sourceTree = "<group>"; };
 		46F3CB692B7FB415007F5F8D /* RequiredFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredFieldValidation.swift; sourceTree = "<group>"; };
@@ -658,6 +660,7 @@
 			isa = PBXGroup;
 			children = (
 				461064362B8744A900CF16A0 /* WelcomeViewControllerTests.swift */,
+				46D1F9822B879FC500357436 /* WelcomeRouterTests.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -1845,6 +1848,7 @@
 				461064372B8744A900CF16A0 /* WelcomeViewControllerTests.swift in Sources */,
 				46F716A22B7240F400EF701A /* SignUpViewControllerTests.swift in Sources */,
 				468379E02B73CD08003D2596 /* UIControl+Ext.swift in Sources */,
+				46D1F9832B879FC500357436 /* WelcomeRouterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
