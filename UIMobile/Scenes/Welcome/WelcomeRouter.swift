@@ -1,4 +1,4 @@
-final class WelcomeRouter {
+public final class WelcomeRouter {
     private let navigationController: NavigationController
     private let loginControllerFactory: () -> LoginViewController
     private let signUpControllerFactory: () -> SignUpViewController

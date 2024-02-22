@@ -13,6 +13,7 @@ public final class WelcomeViewController: UIViewController, Storyboarded {
     }
     
     private func setup() {
+        title = "4Dev"
         loginButton.addTarget(self, action: #selector(didTapOnLogin), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(didTapOnSignUp), for: .touchUpInside)
     }

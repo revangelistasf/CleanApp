@@ -25,6 +25,8 @@ public final class NavigationController: UINavigationController {
     
     public func setRootViewController(_ viewController: UIViewController) {
         setViewControllers([viewController], animated: true)
+        let backButton = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        viewController.navigationItem.backBarButtonItem = backButton
     }
     
     public func pushViewController(_ viewController: UIViewController) {
