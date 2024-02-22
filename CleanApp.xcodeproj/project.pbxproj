@@ -23,6 +23,8 @@
 		4610642E2B867D9600CF16A0 /* LoginControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4610642D2B867D9600CF16A0 /* LoginControllerFactory.swift */; };
 		4610642F2B867DFD00CF16A0 /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464B20612B8650C0003865CC /* AuthenticationSpy.swift */; };
 		461064312B86809100CF16A0 /* RemoteAuthenticationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461064302B86809100CF16A0 /* RemoteAuthenticationFactory.swift */; };
+		461064342B873F3B00CF16A0 /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461064332B873F3B00CF16A0 /* Welcome.storyboard */; };
+		461064372B8744A900CF16A0 /* WelcomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461064362B8744A900CF16A0 /* WelcomeViewControllerTests.swift */; };
 		4647C5D92B536E8600830110 /* TestsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D12B536E8600830110 /* TestsFactory.swift */; };
 		4647C5DA2B536E8600830110 /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D32B536E8600830110 /* LoadingViewSpy.swift */; };
 		4647C5DB2B536E8600830110 /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D42B536E8600830110 /* AlertViewSpy.swift */; };
@@ -376,6 +378,8 @@
 		4610642B2B867CD600CF16A0 /* LoginControllerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerFactoryTests.swift; sourceTree = "<group>"; };
 		4610642D2B867D9600CF16A0 /* LoginControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerFactory.swift; sourceTree = "<group>"; };
 		461064302B86809100CF16A0 /* RemoteAuthenticationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationFactory.swift; sourceTree = "<group>"; };
+		461064332B873F3B00CF16A0 /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
+		461064362B8744A900CF16A0 /* WelcomeViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewControllerTests.swift; sourceTree = "<group>"; };
 		4647C5D12B536E8600830110 /* TestsFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestsFactory.swift; sourceTree = "<group>"; };
 		4647C5D32B536E8600830110 /* LoadingViewSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewSpy.swift; sourceTree = "<group>"; };
 		4647C5D42B536E8600830110 /* AlertViewSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
@@ -639,6 +643,22 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		461064322B873F2C00CF16A0 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				461064332B873F3B00CF16A0 /* Welcome.storyboard */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		461064352B87449500CF16A0 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				461064362B8744A900CF16A0 /* WelcomeViewControllerTests.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		4647C5D02B536E8600830110 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -808,6 +828,7 @@
 			children = (
 				461064222B866D9300CF16A0 /* Login */,
 				468379DA2B73CC91003D2596 /* SignUp */,
+				461064322B873F2C00CF16A0 /* Welcome */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -817,6 +838,7 @@
 			children = (
 				461064252B866E3E00CF16A0 /* Login */,
 				468379DB2B73CCA4003D2596 /* SignUp */,
+				461064352B87449500CF16A0 /* Welcome */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -1664,6 +1686,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F716AD2B72634200EF701A /* SignUp.storyboard in Resources */,
+				461064342B873F3B00CF16A0 /* Welcome.storyboard in Resources */,
 				464B20452B84F3EC003865CC /* Images.xcassets in Resources */,
 				461064242B866DB700CF16A0 /* Login.storyboard in Resources */,
 			);
@@ -1815,6 +1838,7 @@
 			files = (
 				4610642A2B867AD400CF16A0 /* XCTestCase+Extensions.swift in Sources */,
 				461064272B866E4900CF16A0 /* LoginViewControllerTests.swift in Sources */,
+				461064372B8744A900CF16A0 /* WelcomeViewControllerTests.swift in Sources */,
 				46F716A22B7240F400EF701A /* SignUpViewControllerTests.swift in Sources */,
 				468379E02B73CD08003D2596 /* UIControl+Ext.swift in Sources */,
 			);
