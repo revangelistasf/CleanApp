@@ -48,8 +48,8 @@ final class SignUpControllerFactoryTests: XCTestCase {
         XCTAssertEqual(
             validations[5] as! CompareFieldsValidation,
             CompareFieldsValidation(
-                fieldName: "password",
-                fieldNameToCompare: "passwordConfirmation",
+                fieldName: "passwordConfirmation",
+                fieldNameToCompare: "password",
                 fieldLabel: "Password Confirmation"
             )
         )

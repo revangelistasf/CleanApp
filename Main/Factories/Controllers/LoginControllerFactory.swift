@@ -21,13 +21,6 @@ public func makeLoginController(authentication: Authentication) -> LoginViewCont
 }
 
 public func makeLoginValidations() -> [Validation] {
-    return [
-        RequiredFieldValidation(fieldName: "email", fieldLabel: "Email"),
-        EmailValidation(
-            fieldName: "email",
-            fieldLabel: "Email",
-            emailValidator: makeEmailValidatorAdapter()
-        ),
-        RequiredFieldValidation(fieldName: "password", fieldLabel: "Password")
-    ]
+    return ValidationBuilder.field("email").label("Email").required().email().build() +
+        ValidationBuilder.field("password").label("Password").required().build()
 }

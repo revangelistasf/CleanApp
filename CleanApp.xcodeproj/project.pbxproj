@@ -96,6 +96,7 @@
 		46D1F9832B879FC500357436 /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D1F9822B879FC500357436 /* WelcomeRouterTests.swift */; };
 		46D1F9852B87AA5400357436 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D1F9842B87AA5400357436 /* WelcomeRouter.swift */; };
 		46D1F9872B87BA0E00357436 /* WelcomeControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D1F9862B87BA0E00357436 /* WelcomeControllerFactory.swift */; };
+		46D1F98A2B87BBD600357436 /* ValidationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D1F9892B87BBD600357436 /* ValidationBuilder.swift */; };
 		46D43B752B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D43B742B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift */; };
 		46F3CB6A2B7FB415007F5F8D /* RequiredFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3CB692B7FB415007F5F8D /* RequiredFieldValidation.swift */; };
 		46F7169D2B7240F400EF701A /* UIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F716932B7240F400EF701A /* UIMobile.framework */; };
@@ -443,6 +444,7 @@
 		46D1F9822B879FC500357436 /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
 		46D1F9842B87AA5400357436 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		46D1F9862B87BA0E00357436 /* WelcomeControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeControllerFactory.swift; sourceTree = "<group>"; };
+		46D1F9892B87BBD600357436 /* ValidationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationBuilder.swift; sourceTree = "<group>"; };
 		46D43B742B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDispatchQueueDecorator.swift; sourceTree = "<group>"; };
 		46F3CB662B7FB23A007F5F8D /* Validation.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Validation.xctestplan; sourceTree = "<group>"; };
 		46F3CB692B7FB415007F5F8D /* RequiredFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredFieldValidation.swift; sourceTree = "<group>"; };
@@ -896,6 +898,7 @@
 		46837A0C2B74DBBA003D2596 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				46D1F9882B87BBC100357436 /* Builders */,
 				46D43B732B7BCAA100E72BC7 /* Decorators */,
 				469F5E412B76760600439C4E /* Env */,
 				46837A542B74FFF2003D2596 /* Factories */,
@@ -971,6 +974,14 @@
 				46C260432B82585E002D7777 /* ValidationSpy.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		46D1F9882B87BBC100357436 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				46D1F9892B87BBD600357436 /* ValidationBuilder.swift */,
+			);
+			path = Builders;
 			sourceTree = "<group>";
 		};
 		46D43B732B7BCAA100E72BC7 /* Decorators */ = {
@@ -1800,6 +1811,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D1F98A2B87BBD600357436 /* ValidationBuilder.swift in Sources */,
 				464B203F2B84D53C003865CC /* AlamofireAdapterFactory.swift in Sources */,
 				46837A582B762F60003D2596 /* RemoteAddAccountFactory.swift in Sources */,
 				469F5E462B76770A00439C4E /* Environment.swift in Sources */,
