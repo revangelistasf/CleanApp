@@ -95,6 +95,7 @@
 		46C260472B829982002D7777 /* EmailValidatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4647C5D62B536E8600830110 /* EmailValidatorSpy.swift */; };
 		46D1F9832B879FC500357436 /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D1F9822B879FC500357436 /* WelcomeRouterTests.swift */; };
 		46D1F9852B87AA5400357436 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D1F9842B87AA5400357436 /* WelcomeRouter.swift */; };
+		46D1F9872B87BA0E00357436 /* WelcomeControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D1F9862B87BA0E00357436 /* WelcomeControllerFactory.swift */; };
 		46D43B752B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D43B742B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift */; };
 		46F3CB6A2B7FB415007F5F8D /* RequiredFieldValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F3CB692B7FB415007F5F8D /* RequiredFieldValidation.swift */; };
 		46F7169D2B7240F400EF701A /* UIMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F716932B7240F400EF701A /* UIMobile.framework */; };
@@ -441,6 +442,7 @@
 		46C260492B829F88002D7777 /* Core.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Core.xctestplan; sourceTree = "<group>"; };
 		46D1F9822B879FC500357436 /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
 		46D1F9842B87AA5400357436 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		46D1F9862B87BA0E00357436 /* WelcomeControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeControllerFactory.swift; sourceTree = "<group>"; };
 		46D43B742B7BCACD00E72BC7 /* MainDispatchQueueDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDispatchQueueDecorator.swift; sourceTree = "<group>"; };
 		46F3CB662B7FB23A007F5F8D /* Validation.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Validation.xctestplan; sourceTree = "<group>"; };
 		46F3CB692B7FB415007F5F8D /* RequiredFieldValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredFieldValidation.swift; sourceTree = "<group>"; };
@@ -759,8 +761,9 @@
 		464B20402B84D561003865CC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				46837A5A2B763009003D2596 /* SignUpControllerFactory.swift */,
 				4610642D2B867D9600CF16A0 /* LoginControllerFactory.swift */,
+				46D1F9862B87BA0E00357436 /* WelcomeControllerFactory.swift */,
+				46837A5A2B763009003D2596 /* SignUpControllerFactory.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1801,6 +1804,7 @@
 				46837A582B762F60003D2596 /* RemoteAddAccountFactory.swift in Sources */,
 				469F5E462B76770A00439C4E /* Environment.swift in Sources */,
 				46837A0E2B74DBBA003D2596 /* AppDelegate.swift in Sources */,
+				46D1F9872B87BA0E00357436 /* WelcomeControllerFactory.swift in Sources */,
 				464B203B2B84D40E003865CC /* ApiUrlFactory.swift in Sources */,
 				46837A102B74DBBA003D2596 /* SceneDelegate.swift in Sources */,
 				4610642E2B867D9600CF16A0 /* LoginControllerFactory.swift in Sources */,

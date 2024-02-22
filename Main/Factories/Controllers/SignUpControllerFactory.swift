@@ -3,6 +3,9 @@ import Presentation
 import Validation
 import Domain
 
+public func makeSignUpController() -> SignUpViewController {
+    return makeSignUpController(addAccount: makeRemoteAddAccount())
+}
 public func makeSignUpController(addAccount: AddAccount) -> SignUpViewController {
     let controller = SignUpViewController.instantiate()
     let validationComposite = ValidationComposite(validations: makeSignUpValidations())
