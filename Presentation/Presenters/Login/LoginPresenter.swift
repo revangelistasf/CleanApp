@@ -19,7 +19,7 @@ public final class LoginPresenter {
         self.validation = validation
     }
     
-    public func login(viewModel: LoginViewModel) {
+    public func login(viewModel: LoginRequest) {
         if let errorMessage = validation.validate(data: viewModel.toJson()) {
             showAlert(title: "Validation Failed", message: errorMessage)
         } else {

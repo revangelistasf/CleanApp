@@ -7,7 +7,7 @@ final class LoginControllerFactoryTests: XCTestCase {
     func test_backgroundRequest_shouldCompleteOnMainThread() {
         let (sut, authenticationSpy) = makeSut()
         sut.loadViewIfNeeded()
-        sut.login?(makeLoginViewModel())
+        sut.login?(makeLoginRequest())
         let exp = expectation(description: "waiting")
         DispatchQueue.global().async {
             authenticationSpy.completeWith(error: .unexpected)

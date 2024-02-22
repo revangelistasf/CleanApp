@@ -15,9 +15,9 @@ func makeSignUpViewModel(
     )
 }
 
-func makeLoginViewModel(
+func makeLoginRequest(
     email: String? = "any_email@mail.com",
     password: String? = "any_password"
-) -> LoginViewModel {
-    return LoginViewModel(email: email, password: password)
+) -> LoginRequest {
+    return LoginRequest(email: email, password: password)
 }
